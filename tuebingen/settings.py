@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'bootstrap3',
 #    'restaurant',
     'top_page',
-    'giveinfo'
+    'giveinfo',
+    'pictures'
 ]
 
 MIDDLEWARE_CLASSES = [

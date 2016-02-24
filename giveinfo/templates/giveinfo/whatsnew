@@ -2,8 +2,8 @@
 {% block content %}
 
 <div class="blog-header">
-  <h1 class="blog-title">About</h1>
-  <!--  <p class="lead blog-description">About</p> -->
+  <h1 class="blog-title">お役立ち情報</h1>
+  <p class="lead blog-description">About</p>
 </div>
 
 <div class="row">

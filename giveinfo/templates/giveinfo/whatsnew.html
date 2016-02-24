@@ -1,0 +1,33 @@
+{% extends 'giveinfo/index.html' %}
+{% block content %}
+
+<div class="blog-header">
+  <h1 class="blog-title">What's new?</h1>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-8 blog-main">
+　<ul>
+ 　<div class="blog-post">
+  　<!-- <h1 class="blog-post-title">当ＨＰについて</h1>
+   　　<p class="blog-post-meta"> --- <a href="#">管理人</a></p> -->
+
+   　　<p>
+       <dl>
+         {% for post in posts %}
+            <div class="post">
+                <div class="date">
+                    {{ post.published_date }}
+                </div>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaks }}</p>
+            </div>
+         {% endfor %}
+
+　　  </dl>
+    </p>
+　 </div>
+　</ul>
+
+{% endblock %}
