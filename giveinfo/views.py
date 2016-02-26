@@ -7,12 +7,12 @@ def middle(request):
     context = {'text_title': 'お役立ち情報'}
     return render(request, 'giveinfo/middle.html',context)
 
-def summary(request,summary_id):
-    post = get_object_or_404(Summary,summary_id=summary_id)
+def summary(request):
+    post = get_object_or_404(Summary)
     theme_category = 'チュービンゲンについてのまとめ'
     smalltext_title = ''
     context = {'theme_category': theme_category, 'smalltext_title': smalltext_title, 'post': post}
-    return render(request, 'giveinfo/simple_text.html', context)
+    return render(request, 'giveinfo/summary.html', context)
 
 def experience(request,experience_id):
     post = get_object_or_404(Experience,experince_id=experince_id)

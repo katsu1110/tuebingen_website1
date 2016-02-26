@@ -8,7 +8,7 @@ urlpatterns = [
     # /giveinfo/
     url(r'^$', views.middle, name='middle'),
     # /giveinfo/summary/'number'/
-    url(r'^summary/(?P<summary_id>[0-9]+)/$',views.summary,name='summary'),
+    url(r'^summary/$',views.summary,name='summary'),
     # /giveinfo/experience/'number'/
     url(r'^experience/(?P<experience_id>[0-9]+)/$',views.experience,name='experience'),
     # /giveinfo/article/'number'/
