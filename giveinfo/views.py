@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404, render
-from giveinfo.models import Summary, Experience, Article
+from django.template import loader
+from .models import Summary, Experience, Article
 # Create your views here.
 
 def middle(request):

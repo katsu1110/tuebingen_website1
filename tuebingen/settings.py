@@ -31,6 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    #'top_page.apps.Top_pageConfig',
+    #'giveinfo.apps.GiveinfoConfig',
+    #'pictures.apps.PicturesConfig'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
