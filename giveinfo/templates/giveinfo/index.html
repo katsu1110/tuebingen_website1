@@ -39,7 +39,7 @@
         <nav class="blog-nav">
           <a class="blog-nav-item active" href="{% url 'top_page:index' %}">Home</a>
           <a class="blog-nav-item" href="{% url 'giveinfo:about' %}">About</a>
-          <a class="blog-nav-item" href="{% url 'giveinfo:whatsnew' %}">What's new?</a>
+<!--          <a class="blog-nav-item" href="{% url 'giveinfo:whatsnew' %}">What's new?</a> -->
           <a class="blog-nav-item" href="{% url 'giveinfo:contact' %}">Contact</a>
         </nav>
       </div>
@@ -145,7 +145,7 @@
     <footer class="blog-footer">
       <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
       <p>
-        <a href="#">Back to top</a>
+        <a href="{% url 'top_page:index' %}">Back to top</a>
       </p>
     </footer>
 

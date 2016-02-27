@@ -1,5 +1,4 @@
 from django.shortcuts import get_object_or_404, render
-
 from giveinfo.models import Summary, Experience, Article
 # Create your views here.
 
@@ -36,8 +35,8 @@ def about(request):
     context = {'text_title': 'このホームページについて'}
     return(request,'giveinfo/contact.html', context)
 
-def whatsnew(request,whatsnew_id):
-    post = get_object_or_404(Article,article_id=article_id)
-    text_title = "What's new?"
-    context = {'text_title': text_title, 'post': post}
-    return render(request, 'giveinfo/whatsnew.html', context)
+#def whatsnew(request,whatsnew_id):
+#    post = get_object_or_404(Article,article_id=article_id)
+#    text_title = "What's new?"
+#    context = {'text_title': text_title, 'post': post}
+#    return render(request, 'giveinfo/whatsnew.html', context)

@@ -1,8 +1,7 @@
 from django.conf.urls import url
+from . import views
 
-from top_page import views
-
+app_name = 'top_page'
 urlpatterns = [
     url(r'^$',views.index,name='index'),
-    url(r'^whatsnew/$',views.whatsnew,name='whatsnew'),
 ]
