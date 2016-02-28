@@ -1,9 +1,10 @@
 {% extends 'giveinfo/index.html' %}
 {% block content %}
 
+
 <div class="blog-header">
-  <h1 class="blog-title">チュービンゲンまとめ</h1>
-  <p class="lead blog-description">Summary</p>
+  <h1 class="blog-title">{{ theme_category }}</h1>
+  <p class="lead blog-description">{{ smalltext_title }}}</p>
 </div>
 
 <div class="row">
@@ -19,23 +20,16 @@
          {% if post %}
          <ul>
             {% for p in post %}
-            <hr class="featurette-divider">
-
-            <div class="row featurette">
-              <div class="col-md-7">
-                <h2 class="featurette-heading">{{ p.head }} <span class="text-muted">{{ p.subhead }}</span></h2>
-                <p class="lead">{{ p.main_text }}</p>
-              </div>
-              <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" data-src={{ p.correspond_img }} alt={{ p.head }} />
-              </div>
-            </div>
-
-            <hr class="featurette-divider">
+               <dl>
+                  <dt>{{ p.link_title }}</dt>
+                  <dd>{{ p.link_text }}</dd>
+                  <dd><a href="{{ p.link_text }}"></a>{{ p.link_text }}</dd>
+               </dl>
+               <br>
             {% endfor %}
          </ul>
          {% else %}
-         <p>追加されたまとめはありません。</p>
+         <p>追加されたリンクはありません。</p>
          {% endif %}
 
 <!--          <dt>人口</dt>

@@ -49,7 +49,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">チュービンゲン</a>
+              <a class="navbar-brand" href="{% url 'top_page:positive' %}">Tü &hearts;</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -88,7 +88,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <img class="first-slide" src="{% static "images/neckerNight.jpg" %}" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>チュービンゲンについて</h1>
@@ -98,7 +98,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <img class="second-slide" src="{% static "images/canue.jpg" %}" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>生活お役立ち情報</h1>
@@ -108,7 +108,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <img class="third-slide" src="{% static "images/starsky.jpg" %}" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>写真館</h1>
@@ -129,32 +129,24 @@
     </div><!-- /.carousel -->
 
     <!-- What's new list-->
+    <div class="container">
 
     <div class="page-header">
-  <h1>What's new?</h1>
-</div>
-<div class="row">
-  <div class="col-sm-4">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h2 class="panel-title">新しく更新された内容</h2>
-      </div>
-      <div class="panel-body">
-        {% if whatsnew %}
-        <ul>
-           {% for wn in whatsnew %}
-              <li><a href="/{{ wn.link_text }}/">{{ wn.news_text }}</a></li>
-           {% endfor %}
-        </ul>
-        {% else %}
-        <p>新しく更新された内容はありません。</p>
-        {% endif %}
+    <h1><center>What's new?</center></h1>
+      <div class="row">
+          {% if whatsnews %}
+          <ul>
+             {% for wn in whatsnews %}
+                <li><center><a href="/{{ wn.link_text }}/">{{ wn.pub_date }}: {{ wn.news_text }}が更新されました！</a></center></li>
+             {% endfor %}
+          </ul>
+          {% else %}
+          <p><center>新しく更新された内容はありません。</center></p>
+          {% endif %}
+      </div><!-- /.col-sm-4 -->
       </div>
     </div>
-    </div><!-- /.col-sm-4 -->
-</div>
-
-
+    <br>
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -164,22 +156,22 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="{% static "images/neckerNight.jpg" %}" alt="necker river at night" width="140" height="140">
           <h2>チュービンゲンについて</h2>
           <p>南ドイツの片田舎、チュービンゲンという街について簡単にまとめてみました。</p>
-          <p><a class="btn btn-default" href="{% url 'giveinfo:summary' %}" role="button">見てみる &raquo;</a></p>
+          <p><a class="btn btn-primary" href="{% url 'giveinfo:summary' %}" role="button">見てみる &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="{% static "images/canue.jpg" %}" alt="picture of articles" width="140" height="140">
           <h2>生活お役立ち情報</h2>
-          <p>チュービンゲンに滞在することになった人たちのために、テーマ別コラムや留学体験記を載せています。</p>
-          <p><a class="btn btn-default" href="{% url 'giveinfo:middle' %}" role="button">見てみる &raquo;</a></p>
+          <p>チュービンゲン滞在に役立つ、テーマ別コラム、留学体験記、リンク集を載せています。</p>
+          <p><a class="btn btn-primary" href="{% url 'giveinfo:middle' %}" role="button">見てみる &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <img class="img-circle" src="{% static "images/starsky.jpg" %}" alt="picture of starsky" width="140" height="140">
           <h2>写真館</h2>
-          <p>有志の方々から集められた、チュービンゲンの四季折々の写真を集めました。</p>
-          <p><a class="btn btn-default" href="{% url 'pictures:index' %}" role="button">見てみる &raquo;</a></p>
+          <p>有志の方々から集められた、チュービンゲンの四季折々の写真はこちら。</p>
+          <p><a class="btn btn-primary" href="{% url 'pictures:index' %}" role="button">見てみる &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
 
@@ -230,7 +222,7 @@
 <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="{% url 'top_page:index' %}">Back to top</a></p>
-        <p>&copy;　This website is made by webmaster. I declare no conflict of interest over the content of this website. &middot; </p>
+        <p>&copy;　This website is private, and not related to official Tübingen webs. No guarantee on the information in this website. &middot; </p>
         <!--  <a href="#">Privacy</a> &middot; <a href="#"></a>Terms</p> -->
       </footer>
     </div><!-- /.container -->

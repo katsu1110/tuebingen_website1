@@ -12,6 +12,8 @@ urlpatterns = [
     url(r'^experience/(?P<experience_id>[0-9]+)/$',views.experience,name='experience'),
     # /giveinfo/article/'number'/
     url(r'^article/(?P<article_id>[0-9]+)/$',views.article,name='article'),
+    # /giveinfo/link
+    url(r'^link/$',views.link,name='link'),
     # /giveinfo/contact/
     url(r'^contact/$',views.contact,name='contact'),
     # /giveinfo/about/
