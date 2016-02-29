@@ -1,5 +1,5 @@
 {% load staticfiles %}
-{% bootstrap3 %}
+{% load bootstrap3 %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,7 +40,6 @@
         <nav class="blog-nav">
           <a class="blog-nav-item active" href="{% url 'top_page:index' %}">Home</a>
           <a class="blog-nav-item" href="{% url 'giveinfo:about' %}">About</a>
-<!--          <a class="blog-nav-item" href="{% url 'giveinfo:whatsnew' %}">What's new?</a> -->
           <a class="blog-nav-item" href="{% url 'giveinfo:contact' %}">Contact</a>
         </nav>
       </div>
@@ -107,14 +106,14 @@
           <!-- /.blog-post -->
 
        </div>
-       
+
+         <div>
           <nav>
             <ul class="pager">
               <li><a href="#">Previous</a></li>
               <li><a href="#">Next</a></li>
             </ul>
           </nav>
-
         </div><!-- /.blog-main -->
 
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
@@ -127,15 +126,15 @@
             <ol class="list-unstyled">
               <li><a href="{% url 'giveinfo:article' %}">テーマ別コラム</a></li>
               <li><a href="{% url 'giveinfo:experience' %}">留学体験記</a></li>
-              <li><a href="{% url 'giveinfo:links' %}">便利なリンク集</a></li>
-              <li><a href="{% url 'giveinfo:others' %}">その他</a></li>
+              <li><a href="{% url 'giveinfo:link' %}">便利なリンク集</a></li>
+    <!--          <li><a href="{% url 'giveinfo:others' %}">その他</a></li> -->
             </ol>
           </div>
           <div class="sidebar-module">
             <h4>Elsewhere</h4>
             <ol class="list-unstyled">
               <li><a href="{% url 'giveinfo:summary' %}">チュービンゲンについて</a></li>
-              <li><a href="{% url 'giveinfo:columns' %}">生活お役立ち情報</a></li>
+              <li><a href="{% url 'giveinfo:middle' %}">生活お役立ち情報</a></li>
               <li><a href="{% url 'pictures:index' %}">写真館</a></li>
             </ol>
           </div>

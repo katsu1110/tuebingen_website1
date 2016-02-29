@@ -37,11 +37,11 @@ def link(request,link_id):
 
 def contact(request):
     context = {'text_title': 'コンタクト'}
-    return(request,'giveinfo/contact.html', context)
+    return render(request,'giveinfo/contact.html', context)
 
 def about(request):
     context = {'text_title': 'このホームページについて'}
-    return(request,'giveinfo/contact.html', context)
+    return render(request,'giveinfo/about.html', context)
 
 #def whatsnew(request,whatsnew_id):
 #    post = get_object_or_404(Article,article_id=article_id)
