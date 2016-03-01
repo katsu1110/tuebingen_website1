@@ -7,7 +7,7 @@ class Summary(models.Model):
     sub_head = models.CharField(max_length=50, default='')
     main_text = models.TextField()
     correspond_img = models.ImageField(upload_to='uploads/',
-    height_field=100,width_field=162,max_length=30,default='')
+    default='')
 
     def __str__(self):
         return self.main_text
@@ -27,7 +27,7 @@ class Article(models.Model):
     writer = models.CharField(max_length=10, default='管理人')
     main_text = models.TextField()
     correspond_img = models.ImageField(upload_to='uploads/',
-    height_field=200,width_field=324,max_length=30,default='')
+    default='')
 
     def __str__(self):
         return self.text_title
@@ -38,4 +38,6 @@ class Link(models.Model):
     urllink = models.URLField(max_length=100)
 
     def __str__(self):
-            return self.text_title
+            return self.link_title
+
+    

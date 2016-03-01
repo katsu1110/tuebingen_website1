@@ -6,33 +6,43 @@ from .models import Summary, Experience, Article, Link
 # Create your views here.
 
 def middle(request):
-    context = {'text_title': 'お役立ち情報'}
+    experiences = Experience.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
+    articles = Article.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
+    links = Link.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
+    context = {'text_title': 'お役立ち情報','experiences':experiences,'articles':articles,'links':links}
     return render(request, 'giveinfo/middle.html',context)
 
-def summary(request,summary_id):
-    post = get_object_or_404(Summary, summary_id=summary_id)
-    context = {'post': post}
+def summary(request):
+    posts = Summary.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
+    context = {'posts': posts}
     return render(request, 'giveinfo/summary.html', context)
 
-def experience(request,experience_id):
-    post = get_object_or_404(Experience,experince_id=experince_id)
+def experience(request):
+    posts = Experience.objects.filter(pub_date__lte=timezone.now()).order_by('pub_date')
     theme_category = '生活お役立ち情報'
     smalltext_title = '留学・滞在体験記'
-    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'post': post}
+    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'posts': posts}
     return render(request, 'giveinfo/experience.html', context)
 
-def article(request,article_id):
-    post = get_object_or_404(Article,article_id=article_id)
+def article_top(request):
+    posts = Article.objects.filter(pub_date__lte=timezone.now()).order_by('pub_date')
     theme_category = '生活お役立ち情報'
-    smalltext_title = '生活コラム'
-    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'post': post}
+    smalltext_title = '役に立つコラム'
+    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'posts': posts}
+    return render(request, 'giveinfo/article_top.html', context)
+
+def article(request):
+    posts = get_object_or_404(Article,pk=Article.id)
+    theme_category = '生活お役立ち情報'
+    smalltext_title = '役に立つコラム'
+    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'posts': posts}
     return render(request, 'giveinfo/article.html', context)
 
-def link(request,link_id):
-    post = get_object_or404(Link,link_id=link_id)
+def link(request):
+    posts = Link.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
     theme_category = '生活お役立ち情報'
     smalltext_title = '役に立つリンク集'
-    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'post': post}
+    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'posts': posts}
     return render(request, 'giveinfo/link.html', context)
 
 def contact(request):
@@ -46,5 +56,5 @@ def about(request):
 #def whatsnew(request,whatsnew_id):
 #    post = get_object_or_404(Article,article_id=article_id)
 #    text_title = "What's new?"
-#    context = {'text_title': text_title, 'post': post}
+#    context = {'text_title': text_title, 'posts': posts}
 #    return render(request, 'giveinfo/whatsnew.html', context)
