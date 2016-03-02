@@ -1,11 +1,12 @@
 from django.db import models
 from django.utils import timezone
+from tinymce.models import HTMLField
 
 # Create your models here.
 class Summary(models.Model):
     head = models.CharField(max_length=20, default='')
     sub_head = models.CharField(max_length=50, default='')
-    main_text = models.TextField()
+    main_text = HTMLField()
     correspond_img = models.ImageField(upload_to='uploads/',
     default='')
 
@@ -16,7 +17,7 @@ class Experience(models.Model):
     text_title = models.CharField(max_length=40, default='')
     pub_date = models.DateTimeField(blank=True, null=True)
     writer = models.CharField(max_length=10, default='管理人')
-    main_text = models.TextField()
+    main_text = HTMLField()
 
     def __str__(self):
         return self.text_title
@@ -25,7 +26,7 @@ class Article(models.Model):
     text_title = models.CharField(max_length=40, default='')
     pub_date = models.DateTimeField(blank=True, null=True)
     writer = models.CharField(max_length=10, default='管理人')
-    main_text = models.TextField()
+    main_text = HTMLField()
     correspond_img = models.ImageField(upload_to='uploads/',
     default='')
 
@@ -39,5 +40,3 @@ class Link(models.Model):
 
     def __str__(self):
             return self.link_title
-
-    

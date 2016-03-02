@@ -1,37 +1,100 @@
 {% extends 'giveinfo/index.html' %}
+{% load staticfiles %}
+
 {% block content %}
 
-<div class="blog-header">
-  <h1 class="blog-title">About</h1>
-  <!--  <p class="lead blog-description">About</p> -->
-</div>
+<!-- NAVBAR
+================================================== -->
+  <div class="navbar-wrapper">
+    <div class="container">
 
-<div class="row">
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-  <div class="col-sm-8 blog-main">
-　<ul>
- 　<div class="blog-post">
-  　 <h1 class="blog-post-title">当ＨＰについて</h1>
-   　　<p>
-       <dl>
-          <dt>当サイトについて</dt>
-             <dd>南ドイツの片田舎、チュービンゲンに滞在する、あるいは滞在予定の日本人にとって役立つ情報をまとめています。コラムや留学体験記を書いてくれる人を常に募集してますので、
-               いらっしゃいましたら<a href="mailto:code1110g-show@hotmail.co.jp">管理人</a><br>まで教えてください。</dd>
-               <br>
-               <br>
-          <dt>管理人について</dt>
-             <dd>チュービンゲンで博士課程の学生をしています。日本の私立大学で高い学費を払いながら（涙）生物学を学んだ後、「神経科学面白いじゃん！でも日本の大学院学費かかるから厳しいね！」ということで、
-               学費タダで興味のある分野に強そうなドイツへやってまいりました。現在は、基本的に研究室でこき使われております。休みがほしい。</dd>
-               <br>
-               <br>
-          <dt>開発環境について</dt>
-             <dd><del>興味ある人いるのかこれ</del>プログラミング言語は数多くあれど、Pythonがやっぱいいんじゃね？！という思いから、<a href="https://www.djangoproject.com/" target="_blank">Django</a>という、
-               PythonでＨＰ製作・管理ができるFrameworkを使用しています。ＨＰの体裁を整えるHTML、CSSは、<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>から引っ張ってきました。エディターは
-               カッコよくてしかもタダな<a href="https://atom.io/" target="_blank">Atom</a>を使用しています。</dd>
+      <a class="navbar-brand" href="{% url 'top_page:positive' %}">Tü &hearts;</a>
+         </div>
+          <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                 <li><a href="{% url 'top_page:index' %}">Home</a></li>
+                 <li class="active"><a href="{% url 'giveinfo:about' %}">About</a></li>
+                 <li><a href="{% url 'giveinfo:contact' %}">Contact</a></li>
+              </ul>
+          </div>
+       </div>
+    </nav>
+   </div>
+  </div>
 
-　　  </dl>
-    </p>
-　 </div>
-　</ul>
+
+  <div class="container">
+    <div class="whiteback">
+
+       <img src="{% static 'images/about.png' %}" class="img-responsive center-block" alt="about">
+
+    </div>
+  </div>
+
+
+
+<div class="container">
+
+  <div class="whiteback">
+
+  <div class="blog-header">
+    <h1 class="blog-title">About</h1>
+    <p class="lead blog-description">このWebsiteの基本情報をざっくり。</p>
+  </div>
+　<hr>
+
+  <div class="row">
+
+    <div class="col-sm-8 blog-main">
+    <div class="blog-post">
+       <h3 class="blog-post-title">当ＨＰについて</h3>
+       <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+
+       <p>南ドイツの片田舎、チュービンゲンに滞在する、あるいは滞在予定の日本人にとって役立つ情報をまとめています。コラムや留学体験記を書いてくれる人を常に募集してますので、
+         いらっしゃいましたら<a href="mailto:code1110g-show@hotmail.co.jp">管理人</a>まで教えてください。</p>
+       <br>
+
+    </div><!-- /.blog-post -->
+
+     <div class="blog-post">
+        <h3 class="blog-post-title">管理人について</h3>
+        <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+
+        <p>チュービンゲンで博士課程の学生をしています。日本の私立大学で高い学費を払いながら（涙）生物学を学んだ後、「神経科学面白いじゃん！でも日本の大学院学費かかるから厳しいね！」ということで、
+          学費タダで興味のある分野に強そうなドイツへやってまいりました。現在は、基本的に研究室でこき使われております。休みがほしい。</p>
+        <br>
+
+     </div><!-- /.blog-post -->
+
+     <div class="blog-post">
+        <h3 class="blog-post-title">利用・規約について</h3>
+       <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+
+        <p>当サイトに掲載されている情報のほぼ全ては、管理人をはじめ皆様より収集されたものです。決して内容の正確性を保証するものではありませんので、ご注意ください。</p>
+        <br>
+
+     </div><!-- /.blog-post -->
+
+     <div class="blog-post">
+        <h3 class="blog-post-title">開発環境について</h3>
+       <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+
+        <p><del>興味ある人いるのかこれ</del>  プログラミング言語は数多くあれど、時代はPython！という思いこみから、<a href="https://www.djangoproject.com/" target="_blank">Django</a>という
+          PythonでＨＰ製作・管理ができるFrameworkを使用し、当ＨＰを自作しています。体裁を整えるHTML、CSSは、<a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>から引っ張って編集。エディターは
+          カッコよくてしかもタダな<a href="https://atom.io/" target="_blank">Atom</a>を使用しています。</p>
+        <br>
+
+      </div><!-- /.blog-post -->
+
 
 {% endblock %}

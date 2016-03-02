@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% load bootstrap3 %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,6 +32,8 @@
 
     <!-- Custom styles for this template -->
     <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/carousel_edited.css' %}" rel="stylesheet">
+
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -150,11 +151,11 @@
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-    <div class="lowerPart">
-    <div class="container marketing">
+    <div class="whiteback">
+      <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
-      <div style="background-color:#F9F9F9;">
+
       <div class="row">
         <div class="col-lg-4">
           <img class="img-circle" src="{% static "images/neckerNight.jpg" %}" alt="necker river at night" width="140" height="140">
@@ -175,7 +176,7 @@
           <p><a class="btn btn-primary" href="{% url 'pictures:index' %}" role="button">見てみる &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-    </div>
+    </div><!-- /.whiteback -->
 
       <!-- START THE FEATURETTES -->
 <!--
@@ -224,7 +225,7 @@
       <footer>
         <p class="pull-right"><a href="{% url 'top_page:index' %}">Back to top</a></p>
         <p>&copy;　This website is private, and not related to official Tübingen webs. No guarantee on the information in this website. &middot; </p>
-        <a href="">Privacy</a> &middot; <a href=""></a>Terms</p>
+      <!--  <a href="">Privacy</a> &middot; <a href=""></a>Terms</p> -->
       </footer>
     </div><!-- /.container -->
 

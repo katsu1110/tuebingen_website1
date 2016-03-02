@@ -44,7 +44,8 @@ INSTALLED_APPS = [
 #    'restaurant',
     'top_page',
     'giveinfo',
-    'pictures'
+    'pictures',
+    'tinymce', 
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -122,6 +123,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+# ckeditor
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_UPLOAD_PATH = [os.path.join(BASE_DIR, "uploads"),]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
