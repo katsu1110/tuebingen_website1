@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% load bootstrap3 %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,7 +19,9 @@
     <link href="{% static 'css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{% static 'css/cover.css' %}" rel="stylesheet">
+  <!--  <link href="{% static 'css/cover.css' %}" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{% static 'css/blueimp-gallery.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-image-gallery.min.css' %}">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -35,7 +36,7 @@
 
   <body>
 
-    <div class="site-wrapper">
+  <!--  <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
 
@@ -56,28 +57,90 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">写真館</h1>
-            <p class="lead">現在、展示されている写真はありません。チュービンゲンの写真を持っている方、ぜひ管理人まで送ってください。</p>
-            <p class="lead">
+<!--            <p class="lead">現在、展示されている写真はありません。チュービンゲンの写真を持っている方、ぜひ管理人まで送ってください。</p>
+            <p class="lead"></p> -->
+
+            <!-- data gallery -->
+            <div id="links">
+              <a href="{% static 'images/starsky.jpg' %}" title="6 大きな画像の名前" data-gallery>
+                  <img src="{% static 'images/starsky.jpg' %}" width="200" height="150" alt="6 サムネイル" />
+              </a>
+              <p class="text-center"> Title by Poster </p>
+              <a href="{% static 'images/whofirm.jpg' %}" title="6 大きな画像の名前" data-gallery>
+                  <img src="{% static 'images/whofirm.jpg' %}" width="200" height="150" alt="6 サムネイル" />
+              </a>
+              <p class="text-center"> Title by Poster </p>
+        <!--      {% if posts %}
+              {% for p in posts %}
+                <a href={{ p.image }} title={{ p.title }} data-gallery>
+                  <p>{{ p.writer }}</p>
+                <img src={{ p.image }} alt={{ p.title }}>
+                </a>
+              {% endfor %}
+              {% endif %} -->
+            </div>
+
+
+            <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+                <div id="blueimp-gallery" class="blueimp-gallery">
+                    <!-- The container for the modal slides -->
+                    <div class="slides"></div>
+                    <!-- Controls for the borderless lightbox -->
+                    <h3 class="title"></h3>
+                    <a class="prev">‹</a>
+                    <a class="next">›</a>
+                    <a class="close">×</a>
+                    <a class="play-pause"></a>
+                    <ol class="indicator"></ol>
+                    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+                    <div class="modal fade">
+                        <div class="modal-dialog">
+                           <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body next"></div>
+                                 <div class="modal-footer">
+                                      <button type="button" class="btn btn-default pull-left prev">
+                                          <i class="glyphicon glyphicon-chevron-left"></i>
+                                          Previous
+                                      </button>
+                                      <button type="button" class="btn btn-primary next">
+                                          Next
+                                      <i class="glyphicon glyphicon-chevron-right"></i>
+                                      </button>
+                                 </div>
+                           </div>
+                      </div>
+                  </div>
+                </div>
+
+
           <!--    <a href="#" class="btn btn-lg btn-default">Learn more</a>
             </p>
-          </div>
+          </div>  -->
 
-          <div class="mastfoot">
+        <!-- <div class="mastfoot">
             <div class="inner">
               <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             </div>
-          </div>
+          </div> -->
 
-        </div>
+<!--        </div>
 
       </div>
 
     </div>
 
+  </div> -->
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{% static 'js/blueimp-gallery.min.js' %}"/></script>
+    <script src="{% static 'js/bootstrap-image-gallery.min.js' %}"></script>
     <script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery.min.js' %}"><\/script>')</script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
