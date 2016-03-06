@@ -45,8 +45,17 @@ INSTALLED_APPS = [
     'top_page',
     'giveinfo',
     'pictures',
-    'tinymce', 
+    'tinymce',
 ]
+
+# MEDIA: Absolute filesystem path to the directory that will hold user-uploaded files.
+# Example: "/home2/media/media.lawrence.com/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash.
+# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
+MEDIA_URL = '/media/'
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -123,10 +132,19 @@ USE_L10N = True
 
 USE_TZ = True
 
-# ckeditor
-CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
-CKEDITOR_UPLOAD_PATH = "uploads/"
-CKEDITOR_UPLOAD_PATH = [os.path.join(BASE_DIR, "uploads"),]
+## tinymce
+#TINYMCE_JS_URL = os.path.join(MEDIA_URL, "tiny_mce/tiny_mce.js")
+#INYMCE_JS_ROOT = os.path.join(MEDIA_ROOT, "tinymce")
+#TINYMCE_DEFAULT_CONFIG = {
+#    'plugins': "table,spellchecker,paste,searchreplace",
+#    'theme': "advanced",
+#    'cleanup_on_startup': True,
+#    'custom_undo_redo_levels': 10,
+#}
+#TINYMCE_SPELLCHECKER = True
+#TINYMCE_COMPRESSOR = True
+
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/

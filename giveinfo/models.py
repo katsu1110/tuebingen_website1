@@ -6,8 +6,9 @@ from tinymce.models import HTMLField
 class Summary(models.Model):
     head = models.CharField(max_length=20, default='')
     sub_head = models.CharField(max_length=50, default='')
+    pub_date = models.DateTimeField(blank=True, null=True)
     main_text = HTMLField()
-    correspond_img = models.ImageField(upload_to='uploads/',
+    correspond_img = models.ImageField(upload_to='media/images',
     default='')
 
     def __str__(self):
@@ -27,7 +28,7 @@ class Article(models.Model):
     pub_date = models.DateTimeField(blank=True, null=True)
     writer = models.CharField(max_length=10, default='管理人')
     main_text = HTMLField()
-    correspond_img = models.ImageField(upload_to='uploads/',
+    correspond_img = models.ImageField(upload_to='media/images',
     default='')
 
     def __str__(self):

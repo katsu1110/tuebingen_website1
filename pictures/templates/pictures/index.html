@@ -20,8 +20,9 @@
 
     <!-- Custom styles for this template -->
   <!--  <link href="{% static 'css/cover.css' %}" rel="stylesheet"> -->
-    <link rel="stylesheet" href="{% static 'css/blueimp-gallery.min.css' %}">
+    <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
     <link rel="stylesheet" href="{% static 'css/bootstrap-image-gallery.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-image-gallery_edited.css' %}">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -36,57 +37,55 @@
 
   <body>
 
-  <!--  <div class="site-wrapper">
+    <!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
 
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <a class="blog-nav-item active" href="{% url 'top_page:index' %}">Home</a>
-                  <a class="blog-nav-item" href="{% url 'giveinfo:about' %}">About</a>
-                  <a class="blog-nav-item" href="{% url 'giveinfo:contact' %}">Contact</a>
-                </ul>
-              </nav>
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{% url 'top_page:positive' %}">Tü &hearts;</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="{% url 'top_page:index' %}">Home</a></li>
+                <li><a href="{% url 'giveinfo:about' %}">About</a></li>
+                <li><a href="{% url 'giveinfo:contact' %}">Contact</a></li>
+<!--                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>  -->
+              </ul>
             </div>
           </div>
+        </nav>
 
-          <div class="inner cover">
-            <h1 class="cover-heading">写真館</h1>
-<!--            <p class="lead">現在、展示されている写真はありません。チュービンゲンの写真を持っている方、ぜひ管理人まで送ってください。</p>
-            <p class="lead"></p> -->
-
-            <!-- data gallery -->
-            <div id="links">
-              <a href="{% static 'images/starsky.jpg' %}" title="6 大きな画像の名前" data-gallery>
-                  <img src="{% static 'images/starsky.jpg' %}" width="200" height="150" alt="6 サムネイル" />
-              </a>
-              <p class="text-center"> Title by Poster </p>
-              <a href="{% static 'images/whofirm.jpg' %}" title="6 大きな画像の名前" data-gallery>
-                  <img src="{% static 'images/whofirm.jpg' %}" width="200" height="150" alt="6 サムネイル" />
-              </a>
-              <p class="text-center"> Title by Poster </p>
-        <!--      {% if posts %}
-              {% for p in posts %}
-                <a href={{ p.image }} title={{ p.title }} data-gallery>
-                  <p>{{ p.writer }}</p>
-                <img src={{ p.image }} alt={{ p.title }}>
-                </a>
-              {% endfor %}
-              {% endif %} -->
-            </div>
-
+      </div>
+    </div>
 
             <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
-                <div id="blueimp-gallery" class="blueimp-gallery">
+                <div id="blueimp-gallery" class="blueimp-gallery" data-use-bootstrap-modal="false">
                     <!-- The container for the modal slides -->
                     <div class="slides"></div>
                     <!-- Controls for the borderless lightbox -->
                     <h3 class="title"></h3>
+                    <p class="description"></p>
                     <a class="prev">‹</a>
                     <a class="next">›</a>
                     <a class="close">×</a>
@@ -117,32 +116,83 @@
                 </div>
 
 
-          <!--    <a href="#" class="btn btn-lg btn-default">Learn more</a>
-            </p>
-          </div>  -->
+                <!--Add Gallery Images in Grid Layout -->
+<div class="row">
+    <div class="col-md-12">
+        <h2 class="text-center">写真館</h2>
+        <p class="muted text-center">皆様から投稿されたチュービンゲンの写真を載せています。</p>
+    </div>
+</div>
 
-        <!-- <div class="mastfoot">
-            <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            </div>
-          </div> -->
-
-<!--        </div>
-
-      </div>
-
+<div class="Blackback">
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <a href="{% static 'gallary/suzu1.jpg' %}" title="suzu 1" data-gallery>
+            <img src="{% static 'gallary/suzu1.jpg' %}" alt="suzu 1" class="img-responsive" />
+        </a>
+        <p class="muted text-center">「'Title'」 提供: すず</p>
     </div>
 
-  </div> -->
+    <div class="col-md-4">
+        <a href="{% static 'gallary/suzu2.jpg' %}" title="nature image 2" data-gallery>
+            <img src="{% static 'gallary/suzu2.jpg' %}" alt="nature image 2" class="img-responsive" />
+        </a>
+        <p class="muted text-center">「'Title'」 提供: すず</p>
+    </div>
+
+    <div class="col-md-4">
+        <a href="{% static 'gallary/suzu3.jpg' %}" title="nature image 3" data-gallery>
+            <img src="{% static 'gallary/suzu3.jpg' %}" alt="nature image 3" class="img-responsive" />
+        </a>
+        <p class="muted text-center">「'Title'」 提供: すず</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <a href="{% static 'gallary/suzu4.jpg' %}" title="nature image 4" data-gallery>
+            <img src="{% static 'gallary/suzu4.jpg' %}" alt="nature image 4" class="img-responsive" />
+        </a>
+        <p class="muted text-center">「'Title'」 提供: すず</p>
+    </div>
+
+    <div class="col-md-4">
+        <a href="{% static 'gallary/suzu5.jpg' %}" title="nature image 5" data-gallery>
+            <img src="{% static 'gallary/suzu5.jpg' %}" alt="nature image 5" class="img-responsive" />
+        </a>
+        <p class="muted text-center">「'Title'」 提供: すず</p>
+    </div>
+
+    <div class="col-md-4">
+        <a href="{% static 'gallary/suzu6.jpg' %}" title="nature image 6" data-gallery>
+            <img src="{% static 'gallary/suzu6.jpg' %}" alt="nature image 6" class="img-responsive" />
+        </a>
+        <p class="muted text-center">「'Title'」 提供: すず</p>
+    </div>
+</div>
+<hr>
+
+</div>
+
+   <!-- footer -->
+     <footer class="blog-footer">
+      <p>
+         <a href="{% url 'pictures:index' %}">
+           <p class="text-center">Back to top</p>
+         </a>
+      </p>
+    </footer>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{% static 'js/blueimp-gallery.min.js' %}"/></script>
-    <script src="{% static 'js/bootstrap-image-gallery.min.js' %}"></script>
-    <script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery.min.js' %}"><\/script>')</script>
+    <script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{% static "js/vendor/jquery.min.js" %}"><\/script>')</script> 　
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-image-gallery.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
   </body>

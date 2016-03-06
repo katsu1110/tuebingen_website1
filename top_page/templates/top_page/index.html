@@ -11,8 +11,8 @@
     <link rel="icon" href="{% static 'favicon.ico' %}">
     <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-
-    <title>チュービンゲン</title>
+  -->
+    <title>チュービンゲンを日本語で紹介</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -31,7 +31,7 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+<!--    <link href="{% static 'css/carousel.css' %}" rel="stylesheet"> -->
     <link href="{% static 'css/carousel_edited.css' %}" rel="stylesheet">
 
   </head>
@@ -89,7 +89,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="{% static "images/neckerNight.jpg" %}" alt="First slide">
+          <img class="first-slide img-responsive center-block" src="{% static "gallary/suzu16.jpg" %}" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>チュービンゲンについて</h1>
@@ -99,7 +99,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="{% static "images/canue.jpg" %}" alt="Second slide">
+          <img class="second-slide img-responsive center-block" src="{% static "gallary/suzu3.jpg" %}" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>生活お役立ち情報</h1>
@@ -109,7 +109,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="{% static "images/starsky.jpg" %}" alt="Third slide">
+          <img class="third-slide img-responsive center-block" src="{% static "gallary/suzu5.jpg" %}" alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>写真館</h1>
@@ -158,19 +158,19 @@
 
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="{% static "images/neckerNight.jpg" %}" alt="necker river at night" width="140" height="140">
+          <img class="img-circle" src="{% static "gallary/suzu16.jpg" %}" alt="necker river at night" width="140" height="140">
           <h2>チュービンゲンについて</h2>
           <p>南ドイツの片田舎、チュービンゲンという街について簡単にまとめてみました。</p>
           <p><a class="btn btn-primary" href="{% url 'giveinfo:summary' %}" role="button">見てみる &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="{% static "images/canue.jpg" %}" alt="picture of articles" width="140" height="140">
+          <img class="img-circle" src="{% static "gallary/suzu3.jpg" %}" alt="picture of articles" width="140" height="140">
           <h2>生活お役立ち情報</h2>
           <p>チュービンゲン滞在に役立つ、テーマ別コラム、留学体験記、リンク集を載せています。</p>
           <p><a class="btn btn-primary" href="{% url 'giveinfo:middle' %}" role="button">見てみる &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="{% static "images/starsky.jpg" %}" alt="picture of starsky" width="140" height="140">
+          <img class="img-circle" src="{% static "gallary/suzu5.jpg" %}" alt="picture of starsky" width="140" height="140">
           <h2>写真館</h2>
           <p>有志の方々から集められた、チュービンゲンの四季折々の写真はこちら。</p>
           <p><a class="btn btn-primary" href="{% url 'pictures:index' %}" role="button">見てみる &raquo;</a></p>
@@ -220,14 +220,14 @@
 
       <!-- /END THE FEATURETTES -->
 
-
-<!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="{% url 'top_page:index' %}">Back to top</a></p>
-        <p>&copy;　This website is private, and not related to official Tübingen webs. No guarantee on the information in this website. &middot; </p>
-      <!--  <a href="">Privacy</a> &middot; <a href=""></a>Terms</p> -->
-      </footer>
     </div><!-- /.container -->
+
+    <!-- FOOTER -->
+          <footer>
+            <p class="pull-right"><a href="{% url 'top_page:index' %}">Back to top </a></p>
+            <p> This website is private, and not related to official information from the Tübingen networks or whatsoever. </p>
+          <!--  <a href="">Privacy</a> &middot; <a href=""></a>Terms</p> -->
+          </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
