@@ -1,31 +1,126 @@
 {% extends 'giveinfo/index.html' %}
+{% load staticfiles %}
+
 {% block content %}
 
-<div class="blog-header">
-  <h1 class="blog-title">お役立ち情報</h1>
-  <p class="lead blog-description">留学・滞在体験記/役立つコラム</p>
-</div>
+<!-- NAVBAR
+================================================== -->
+  <div class="navbar-wrapper">
+    <div class="container">
 
-<div class="row">
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-  <div class="col-sm-8 blog-main">
-　<ul>
- 　<div class="blog-post">
-  　<!-- <h1 class="blog-post-title">当ＨＰについて</h1>
-   　　<p class="blog-post-meta"> --- <a href="#">管理人</a></p> -->
+      <a class="navbar-brand" href="{% url 'top_page:positive' %}">Tü &hearts;</a>
+         </div>
+          <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                 <li><a href="{% url 'top_page:index' %}">Home</a></li>
+                 <li class="active"><a href="{% url 'giveinfo:about' %}">About</a></li>
+                 <li><a href="{% url 'giveinfo:contact' %}">Contact</a></li>
+              </ul>
+          </div>
+       </div>
+    </nav>
+   </div>
+  </div>
 
-   　　<p>
-       <dl>
-          <dt>留学・滞在体験記</dt>
-             <dd>チュービンゲンに住むってどんな感じ？すでにチュービンゲンに住んでいるor住んでいた日本人の皆さんに、それぞれの経験を語ってもらいました。</dd>
-          <dt>役に立つコラム</dt>
-             <dd>外国での生活、言語、手続き、旅行などなど・・・・共有するとみんなの役に立つ（かもしれない）記事を、元・現チュービンゲン在住の日本人の皆さんに書いてもらいました。</dd>
-          <dt>お役立ちリンク集</dt>
-             <dd>ドイツで生きていくにはかかせない（かもしれない）、役に立つリンクを集めています。</dd>
 
-　　  </dl>
-    </p>
-　 </div>
-　</ul>
+  <div class="container">
+    <div class="whiteback">
+
+       <img src="{% static 'gallary/suzu3.jpg' %}" class="img-responsive center-block" alt="building">
+
+    </div>
+  </div>
+
+
+
+<div class="container">
+
+  <div class="whiteback">
+
+  <div class="blog-header">
+    <h1 class="blog-title">生活お役立ち情報</h1>
+    <p class="lead blog-description">留学・滞在体験記　/　テーマ別コラム　/　リンク集</p>
+  </div>
+　<hr>
+
+  <div class="row">
+
+    <div class="col-sm-8 blog-main">
+    <div class="blog-post">
+       <h3 class="blog-post-title">滞在・留学体験記</h3>
+       <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+
+       <p>チュービンゲンに滞在した、あるいは滞在している日本人の方々による、滞在・留学体験記のコーナーです。</p>
+       <p>
+         <strong>滞在・留学体験記を書いてくれる元・現チュービンゲン在住の日本人の方を探しています！</strong>
+           <ul>
+             <li>字数は1000字以内とします。</li>
+             <li>本名が望ましいですが、イニシャル、匿名でも構いません。</li>
+             <li>ただ、性別・年齢・仕事（例：ポスドク、交換留学生、など）は教えてくれると助かります。</li>
+             <li>word、メモ帳などで文章を書いていただき、<a href="mailto:code1110g-show@hotmail.co.jp">管理人</a>まで送ってください！</li>
+           </ul>
+       </p>
+       <br>
+
+    </div><!-- /.blog-post -->
+    <hr>
+
+     <div class="blog-post">
+        <h3 class="blog-post-title">テーマ別コラム</h3>
+        <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+
+        <p>役に立つ、かもしれない、テーマ自由の読み物のコーナーです。</p>
+        <p>
+          <strong>テーマ別コラムを書いてくれる元・現チュービンゲン在住の日本人の方を探しています！</strong>
+            <ul>
+              <li>字数は無制限です（長ければ、連載という形で分割して掲載します）。</li>
+              <li>テーマはなんでもありですが、チュービンゲンに関連したことがいいかもしれません・・・</li>
+              <br>
+                <ul>
+                  <li>例: 留学系　－－　ドイツ渡航準備、奨学金、渡航後やるべき手続き、入学手続き、ビザ、ドイツ語コース、プロゼミ、タンデム、日本語学科、図書館の利用、インターンシップ... </li>
+                  <br>
+                  <li>例: 仕事系　－－　研究所、ワークライフバランス、税金、ドイツ語はどこまで必要か、日本人がドイツで働く際に注意すべきこと、英語、HiWi、日本とドイツの職場の違い... </li>
+                  <br>
+                  <li>例: 私生活系　－－　ドイツ人の性格傾向、家探し、メンザ、自炊、旅行、スーパー、パーティー、スポーツ、留学したら彼氏・彼女ができるか、遠距離恋愛、ドイツ人の恋愛観、ドイツでの失敗、ドイツで感動したこと...</li>
+                  <br>
+                  <li>例: その他　－－　外国に住む時のストレスとそのケア、ＩＰアドレスを誤魔化してニコ動などを完全視聴する、Youtubeの広告をブロックする、Webアプリの開発、ドイツ人と結婚するということ、アニメ、ドラマ・・・</li>
+               </ul>
+              <br>
+              <li>本名が望ましいですが、イニシャル、匿名でも構いません。</li>
+              <li>ただ、性別・年齢・仕事（例：ポスドク、交換留学生、など）は教えてくれると助かります。</li>
+              <li>word、メモ帳などで文章を書いていただき、<a href="mailto:code1110g-show@hotmail.co.jp">管理人</a>まで送ってください！</li>
+            </ul>
+        </p>
+        <br>
+
+     </div><!-- /.blog-post -->
+     <hr>
+
+     <div class="blog-post">
+        <h3 class="blog-post-title">役立ちリンク集</h3>
+       <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+
+        <p>チュービンゲンで生きていくのに必要（かもしれない）リンクを集めました。</p>
+        <ul>
+        {% if links %}
+           {% for link in links %}
+            <li><a href={{ link.urllink }} target="_blank">{{ link.link_title }}</a></li>
+           {% endfor %}
+        {% endif %}
+        <br>
+
+     </div><!-- /.blog-post -->
+     <hr>
+
 
 {% endblock %}

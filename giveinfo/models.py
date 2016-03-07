@@ -8,7 +8,7 @@ class Summary(models.Model):
     sub_head = models.CharField(max_length=50, default='')
     pub_date = models.DateTimeField(blank=True, null=True)
     main_text = HTMLField()
-    correspond_img = models.ImageField(upload_to='media/images',
+    img = models.ImageField(upload_to='images',
     default='')
 
     def __str__(self):
@@ -28,7 +28,7 @@ class Article(models.Model):
     pub_date = models.DateTimeField(blank=True, null=True)
     writer = models.CharField(max_length=10, default='管理人')
     main_text = HTMLField()
-    correspond_img = models.ImageField(upload_to='media/images',
+    img = models.ImageField(upload_to='images',
     default='')
 
     def __str__(self):

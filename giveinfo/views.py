@@ -8,8 +8,8 @@ from .models import Summary, Experience, Article, Link
 def middle(request):
     experiences = Experience.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
     articles = Article.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
-    links = Link.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
-    context = {'text_title': 'お役立ち情報','experiences':experiences,'articles':articles,'links':links}
+    links = Link.objects.all()
+    context = {'experiences':experiences,'articles':articles,'links':links}
     return render(request, 'giveinfo/middle.html',context)
 
 def summary(request):

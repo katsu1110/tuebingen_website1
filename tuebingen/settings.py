@@ -45,8 +45,12 @@ INSTALLED_APPS = [
     'top_page',
     'giveinfo',
     'pictures',
-    'tinymce',
+    'django_wysiwyg',
+#    'ckeditor',
+#     'tinymce'
 ]
+
+#DJANGO_WYSIWYG_FLAVOR = "tinymce"
 
 # MEDIA: Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home2/media/media.lawrence.com/media/"
@@ -132,6 +136,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+#CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
 ## tinymce
 #TINYMCE_JS_URL = os.path.join(MEDIA_URL, "tiny_mce/tiny_mce.js")
 #INYMCE_JS_ROOT = os.path.join(MEDIA_ROOT, "tinymce")
