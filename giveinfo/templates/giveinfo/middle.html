@@ -58,7 +58,7 @@
     <div class="col-sm-8 blog-main">
     <div class="blog-post">
        <h3 class="blog-post-title">滞在・留学体験記</h3>
-       <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+       <p class="blog-post-meta"><a href="{% url 'giveinfo:experience_top' %}">(jump & share experiences!)</a></p>
 
        <p>チュービンゲンに滞在した、あるいは滞在している日本人の方々による、滞在・留学体験記のコーナーです。</p>
        <p>
@@ -66,7 +66,7 @@
            <ul>
              <li>字数は1000字以内とします。</li>
              <li>本名が望ましいですが、イニシャル、匿名でも構いません。</li>
-             <li>ただ、性別・年齢・仕事（例：ポスドク、交換留学生、など）は教えてくれると助かります。</li>
+             <li>ただ、性別・仕事（例：ポスドク、交換留学生、など）は教えてくれると助かります。</li>
              <li>word、メモ帳などで文章を書いていただき、<a href="mailto:code1110g-show@hotmail.co.jp">管理人</a>まで送ってください！</li>
            </ul>
        </p>
@@ -77,7 +77,7 @@
 
      <div class="blog-post">
         <h3 class="blog-post-title">テーマ別コラム</h3>
-        <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+        <p class="blog-post-meta"><a href="{% url 'giveinfo:article_top' %}">(jump & learn something new!)</a></p>
 
         <p>役に立つ、かもしれない、テーマ自由の読み物のコーナーです。</p>
         <p>
@@ -107,7 +107,8 @@
      <hr>
 
      <div class="blog-post">
-        <h3 class="blog-post-title">役立ちリンク集</h3>
+        <h3 class="blog-post-title">役に立つリンク集</h3>
+        <p class="blog-post-meta"><a href="{% url 'giveinfo:link' %}">(jump and explore!)</a></p>
        <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
 
         <p>チュービンゲンで生きていくのに必要（かもしれない）リンクを集めました。</p>

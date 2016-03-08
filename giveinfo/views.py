@@ -17,32 +17,29 @@ def summary(request):
     context = {'posts': posts}
     return render(request, 'giveinfo/summary.html', context)
 
-def experience(request):
+def experience_top(request):
     posts = Experience.objects.filter(pub_date__lte=timezone.now()).order_by('pub_date')
-    theme_category = '生活お役立ち情報'
-    smalltext_title = '留学・滞在体験記'
-    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'posts': posts}
+    context = {'posts': posts}
+    return render(request, 'giveinfo/experience_top.html', context)
+
+def experience(request):
+    posts = get_object_or_404(Experience,pk=Experience.id)
+    context = {'posts': posts}
     return render(request, 'giveinfo/experience.html', context)
 
 def article_top(request):
     posts = Article.objects.filter(pub_date__lte=timezone.now()).order_by('pub_date')
-    theme_category = '生活お役立ち情報'
-    smalltext_title = '役に立つコラム'
-    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'posts': posts}
+    context = {'posts': posts}
     return render(request, 'giveinfo/article_top.html', context)
 
 def article(request):
     posts = get_object_or_404(Article,pk=Article.id)
-    theme_category = '生活お役立ち情報'
-    smalltext_title = '役に立つコラム'
-    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'posts': posts}
+    context = {'posts': posts}
     return render(request, 'giveinfo/article.html', context)
 
 def link(request):
-    posts = Link.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
-    theme_category = '生活お役立ち情報'
-    smalltext_title = '役に立つリンク集'
-    context = {'theme_category': theme_category, 'smalltext_title': smalltext_title,'posts': posts}
+    posts = Link.objects.all()
+    context = {'posts': posts}
     return render(request, 'giveinfo/link.html', context)
 
 def contact(request):

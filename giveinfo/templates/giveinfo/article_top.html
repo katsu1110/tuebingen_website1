@@ -53,22 +53,35 @@
   </div>
 　<hr>
 
-
- {% if posts %}
-
- {% for p in posts %}
-
   <div class="row">
 
     <div class="col-sm-8 blog-main">
     <div class="blog-post">
-       <h3 class="blog-post-title">{{ p.text_title }}</h3>
-       <p class="blog-post-meta">{{ p.pub_date }} <a href="">投稿者：{{ p.writer }}</a></p>
-                <p>{{ p.main_text }}</p>
-    </div>
-  {% endfor %}
-  {% else %}
-     <p>追加されたテーマ別コラムはありません。</p>
-  {% endif %}
-          　　
+      <h3 class="blog-post-title">topic-free articles</h3>
+      <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+
+      <br>
+
+         　　<p>
+             <dl>
+               {% if posts %}
+               <ul>
+                  {% for p in posts %}
+                  <li>
+                     <dl>
+                        <dt><a href="{% url 'giveinfo:article' p.id %}">{{ p.text_title }}</a></dt>
+                        <dd>投稿者：{{ p.writer }}</dd>
+                     </dl>
+                     <br>
+                 </li>
+                  {% endfor %}
+               </ul>
+               {% else %}
+               <p>追加されたテーマ別コラムはありません。</p>
+               {% endif %}
+             </dl>
+          </p>
+      　 </div>
+      　</ul>
+
 {% endblock %}

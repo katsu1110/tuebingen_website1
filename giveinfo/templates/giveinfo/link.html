@@ -1,46 +1,94 @@
 {% extends 'giveinfo/index.html' %}
+{% load staticfiles %}
 {% block content %}
 
+<!-- NAVBAR
+================================================== -->
+  <div class="navbar-wrapper">
+    <div class="container">
 
-<div class="blog-header">
-  <h1 class="blog-title">{{ theme_category }}</h1>
-  <p class="lead blog-description">{{ smalltext_title }}}</p>
-</div>
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-<div class="row">
+      <a class="navbar-brand" href="{% url 'top_page:positive' %}">Tü &hearts;</a>
+         </div>
+          <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                 <li><a href="{% url 'top_page:index' %}">Home</a></li>
+                 <li><a href="{% url 'giveinfo:about' %}">About</a></li>
+                 <li><a href="{% url 'giveinfo:contact' %}">Contact</a></li>
+              </ul>
+          </div>
+       </div>
+    </nav>
+   </div>
+  </div>
 
-  <div class="col-sm-8 blog-main">
-　<ul>
- 　<div class="blog-post">
-  　<!-- <h1 class="blog-post-title">当ＨＰについて</h1>
-   　　<p class="blog-post-meta"> --- <a href="#">管理人</a></p> -->
+  <!-- content
+  ================================================== -->
+  <div class="container">
+    <div class="whiteback">
 
-   　　<p>
-       <dl>
-         {% if post %}
-         <ul>
-            {% for p in post %}
-               <dl>
-                  <dt>{{ p.link_title }}</dt>
-                  <dd>{{ p.link_text }}</dd>
-                  <dd><a href="{{ p.link_text }}"></a>{{ p.link_text }}</dd>
-               </dl>
-               <br>
-            {% endfor %}
-         </ul>
-         {% else %}
-         <p>追加されたリンクはありません。</p>
-         {% endif %}
+  <!--     <img src="{% static 'images/links.jpg' %}" class="img-responsive center-block" alt="building"> -->
 
-<!--          <dt>人口</dt>
-             <dd>85,000人　（東京都: 10,000,000人、大阪: 2,700,000人、京都: 1,500,000人）</dd>
-          <dt>学生数</dt>
-             <dd>28,400人　（早稲田大学: 55,000人、同志社大学: 29,000人、中央大学: 26,000人）</dd>
-          <dt>住宅価格</dt>
-             <dd>高い順でドイツ6位　(1: München 2: Germering 3: Stuttgart 4: Leinfelden-Echterdingen 5: Dachau)</dd> -->
-　　  </dl>
-    </p>
-　 </div>
-　</ul>
+    </div>
+  </div>
+
+
+
+<div class="container">
+
+  <div class="whiteback">
+
+  <div class="blog-header">
+    <h1 class="blog-title">生活お役立ち情報</h1>
+    <p class="lead blog-description">リンク集</p>
+  </div>
+　<hr>
+
+  <div class="row">
+
+    <div class="col-sm-8 blog-main">
+    <div class="blog-post">
+       <h3 class="blog-post-title">Links</h3>
+       <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+
+       <br>
+
+          　　<p>
+              <dl>
+                {% if posts %}
+                <ul>
+                   {% for p in posts %}
+                   <li>
+                      <dl>
+                         <dt><a href="{{ p.urllink }}" target="_blank">{{ p.link_title }}</a></dt>
+                         <dd>{{ p.link_text }}</dd>
+                      </dl>
+                      <br>
+                  </li>
+                   {% endfor %}
+                </ul>
+                {% else %}
+                <p>追加されたリンクはありません。</p>
+                {% endif %}
+
+       <!--          <dt>人口</dt>
+                    <dd>85,000人　（東京都: 10,000,000人、大阪: 2,700,000人、京都: 1,500,000人）</dd>
+                 <dt>学生数</dt>
+                    <dd>28,400人　（早稲田大学: 55,000人、同志社大学: 29,000人、中央大学: 26,000人）</dd>
+                 <dt>住宅価格</dt>
+                    <dd>高い順でドイツ6位　(1: München 2: Germering 3: Stuttgart 4: Leinfelden-Echterdingen 5: Dachau)</dd> -->
+       　　  </dl>
+           </p>
+       　 </div>
+       　</ul>
 
 {% endblock %}

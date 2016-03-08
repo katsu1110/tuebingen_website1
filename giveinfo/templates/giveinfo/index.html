@@ -44,13 +44,13 @@
 　　   <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
-            <p>チュービンゲン留学、滞在に関する情報を発信するページです。</p>
+            <p>チュービンゲン留学、滞在に関する情報を日本語で発信するページです。</p>
           </div>
           <div class="sidebar-module">
             <h4>コンテンツ</h4>
             <ol class="list-unstyled">
               <li><a href="{% url 'giveinfo:article_top' %}">テーマ別コラム</a></li>
-              <li><a href="{% url 'giveinfo:experience' %}">滞在・留学体験記</a></li>
+              <li><a href="{% url 'giveinfo:experience_top' %}">滞在・留学体験記</a></li>
               <li><a href="{% url 'giveinfo:link' %}">便利なリンク集</a></li>
             </ol>
           </div>
@@ -87,7 +87,7 @@
     <script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery.min.js' %}"><\/script>')</script>
     <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
     <script type="text/javascript">
-       $.backstretch("../../static/gallary/suzu1.jpg");
+       $.backstretch("../../static/gallary/suzu10.jpg");
     </script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

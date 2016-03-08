@@ -49,26 +49,39 @@
 
   <div class="blog-header">
     <h1 class="blog-title">生活お役立ち情報</h1>
-    <p class="lead blog-description">テーマ別コラム</p>
+    <p class="lead blog-description">滞在・留学体験記</p>
   </div>
 　<hr>
-
-
- {% if posts %}
-
- {% for p in posts %}
 
   <div class="row">
 
     <div class="col-sm-8 blog-main">
     <div class="blog-post">
-       <h3 class="blog-post-title">{{ p.text_title }}</h3>
-       <p class="blog-post-meta">{{ p.pub_date }} <a href="">投稿者：{{ p.writer }}</a></p>
-                <p>{{ p.main_text }}</p>
-    </div>
-  {% endfor %}
-  {% else %}
-     <p>追加されたテーマ別コラムはありません。</p>
-  {% endif %}
-          　　
+       <h3 class="blog-post-title">Experiences in staying at Tübingen</h3>
+       <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+
+       <br>
+
+          　　<p>
+              <dl>
+                {% if posts %}
+                <ul>
+                   {% for p in posts %}
+                   <li>
+                      <dl>
+                         <dt><a href="{% url 'giveinfo:experience' p.id %}">{{ p.text_title }}</a></dt>
+                         <dd>投稿者：{{ p.writer }}</dd>
+                      </dl>
+                      <br>
+                  </li>
+                   {% endfor %}
+                </ul>
+                {% else %}
+                <p>追加された滞在・留学体験記はありません。</p>
+                {% endif %}
+              </dl>
+           </p>
+       　 </div>
+       　</ul>
+
 {% endblock %}
