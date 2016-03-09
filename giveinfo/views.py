@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, render
 #from django.http import HttpResponse
 #from django.template import loader
 from django.utils import timezone
-from .models import Summary, Experience, Article, Link
+from .models import Summary, Experience, ExperienceText, Article, ArticleText, Link
 # Create your views here.
 
 def middle(request):
@@ -22,8 +22,8 @@ def experience_top(request):
     context = {'posts': posts}
     return render(request, 'giveinfo/experience_top.html', context)
 
-def experience(request):
-    posts = get_object_or_404(Experience,pk=Experience.id)
+def experience(request,experience_id):
+    posts = get_object_or_404(Experience,pk=experience_id)
     context = {'posts': posts}
     return render(request, 'giveinfo/experience.html', context)
 
@@ -32,8 +32,8 @@ def article_top(request):
     context = {'posts': posts}
     return render(request, 'giveinfo/article_top.html', context)
 
-def article(request):
-    posts = get_object_or_404(Article,pk=Article.id)
+def article(request,article_id):
+    posts = get_object_or_404(Article,pk=article_id)
     context = {'posts': posts}
     return render(request, 'giveinfo/article.html', context)
 

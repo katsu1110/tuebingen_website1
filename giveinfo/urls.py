@@ -13,11 +13,11 @@ urlpatterns = [
     # /giveinfo/article_top/
     url(r'^experience_top/$',views.experience_top,name='experience_top'),
     # /giveinfo/experience/'id'/
-    url(r'^experience/(?P<pk>[0-9]+)/$',views.experience,name='experience'),
+    url(r'^experience/(?P<experience_id>[0-9]+)/$',views.experience,name='experience'),
     # /giveinfo/article_top/
     url(r'^article_top/$',views.article_top,name='article_top'),
     # /giveinfo/article/'id'/
-    url(r'^article/(?P<pk>[0-9]+)/$',views.article,name='article'),
+    url(r'^article/(?P<article_id>[0-9]+)/$',views.article,name='article'),
     # /giveinfo/link/
     url(r'^link/$',views.link,name='link'),
     # /giveinfo/contact/

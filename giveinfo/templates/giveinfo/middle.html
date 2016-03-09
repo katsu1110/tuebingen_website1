@@ -61,14 +61,32 @@
        <p class="blog-post-meta"><a href="{% url 'giveinfo:experience_top' %}">(jump & share experiences!)</a></p>
 
        <p>チュービンゲンに滞在した、あるいは滞在している日本人の方々による、滞在・留学体験記のコーナーです。</p>
+      <br>
+     <div class="container">
+      <div class="colorback">
+       <ul>
+       {% if experiences %}
+          {% for experience in experiences %}
+           <li><a href="{% url 'giveinfo:experience' experience.id %}">{{ experience.text_title }}</a> : by {{ experience.writer }}</li>
+          {% endfor %}
+       {% endif %}
+      </ul>
+    </div>
+  </div>
+      <br>
        <p>
-         <strong>滞在・留学体験記を書いてくれる元・現チュービンゲン在住の日本人の方を探しています！</strong>
+         <div class="alert alert-success" role="alert">
+           <div>
+           <strong>滞在・留学体験記を書いてくれる元・現チュービンゲン在住の日本人の方を探しています！</strong>
+           </div>
+           <br>
            <ul>
              <li>字数は1000字以内とします。</li>
              <li>本名が望ましいですが、イニシャル、匿名でも構いません。</li>
              <li>ただ、性別・仕事（例：ポスドク、交換留学生、など）は教えてくれると助かります。</li>
              <li>word、メモ帳などで文章を書いていただき、<a href="mailto:code1110g-show@hotmail.co.jp">管理人</a>まで送ってください！</li>
            </ul>
+         </div>
        </p>
        <br>
 
@@ -80,8 +98,24 @@
         <p class="blog-post-meta"><a href="{% url 'giveinfo:article_top' %}">(jump & learn something new!)</a></p>
 
         <p>役に立つ、かもしれない、テーマ自由の読み物のコーナーです。</p>
+        <br>
+        <div>
+        <ul>
+        {% if articles %}
+           {% for article in articles %}
+            <li><a href="{% url 'giveinfo:article' article.id %}">{{ article.text_title }}</a> : by {{ article.writer }}</li>
+           {% endfor %}
+        {% endif %}
+       </ul>
+     </div>
+     <br>
+
         <p>
-          <strong>テーマ別コラムを書いてくれる元・現チュービンゲン在住の日本人の方を探しています！</strong>
+          <div class="alert alert-success" role="alert">
+          <div>
+              <strong>テーマ別コラムを書いてくれる元・現チュービンゲン在住の日本人の方を探しています！</strong>
+          </div>
+            <br>
             <ul>
               <li>字数は無制限です（長ければ、連載という形で分割して掲載します）。</li>
               <li>テーマはなんでもありですが、チュービンゲンに関連したことがいいかもしれません・・・</li>
@@ -97,9 +131,10 @@
                </ul>
               <br>
               <li>本名が望ましいですが、イニシャル、匿名でも構いません。</li>
-              <li>ただ、性別・年齢・仕事（例：ポスドク、交換留学生、など）は教えてくれると助かります。</li>
+              <li>ただ、性別・仕事（例：ポスドク、交換留学生、など）は教えてくれると助かります。</li>
               <li>word、メモ帳などで文章を書いていただき、<a href="mailto:code1110g-show@hotmail.co.jp">管理人</a>まで送ってください！</li>
             </ul>
+          </div>
         </p>
         <br>
 
@@ -112,12 +147,16 @@
        <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
 
         <p>チュービンゲンで生きていくのに必要（かもしれない）リンクを集めました。</p>
+        <br>
+        <div>
         <ul>
         {% if links %}
            {% for link in links %}
             <li><a href={{ link.urllink }} target="_blank">{{ link.link_title }}</a></li>
            {% endfor %}
         {% endif %}
+      </ul>
+    </div>
         <br>
 
      </div><!-- /.blog-post -->
