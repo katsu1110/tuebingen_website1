@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Summary, Experience, ExperienceText, Article, ArticleText, Link
+from .models import Summary, Experience, Experiencetext, Article, Articletext, Link
 
 #class SummaryAdmin(admin.ModelAdmin):
 #    change_form_template = 'giveinfo/admin/change_form.html'
@@ -15,7 +15,7 @@ from .models import Summary, Experience, ExperienceText, Article, ArticleText, L
 #admin.site.register(Article,ArticleAdmin)
 admin.site.register(Summary)
 admin.site.register(Experience)
-admin.site.register(ExperienceText)
+admin.site.register(Experiencetext)
 admin.site.register(Article)
-admin.site.register(ArticleText)
+admin.site.register(Articletext)
 admin.site.register(Link)

@@ -2,7 +2,8 @@ from django.shortcuts import get_object_or_404, render
 #from django.http import HttpResponse
 #from django.template import loader
 from django.utils import timezone
-from .models import Summary, Experience, ExperienceText, Article, ArticleText, Link
+from .models import Summary, Experience, Article, Link, Experiencetext, Articletext
+# ExperienceText, ArticleText
 # Create your views here.
 
 def middle(request):
@@ -13,9 +14,7 @@ def middle(request):
     return render(request, 'giveinfo/middle.html',context)
 
 def summary(request):
-    posts = Summary.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
-    context = {'posts': posts}
-    return render(request, 'giveinfo/summary.html', context)
+    return render(request, 'giveinfo/summary.html')
 
 def experience_top(request):
     posts = Experience.objects.filter(pub_date__lte=timezone.now()).order_by('pub_date')

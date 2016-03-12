@@ -56,17 +56,20 @@
 
  {% if posts %}
 
- {% for p in posts %}
-
   <div class="row">
 
     <div class="col-sm-8 blog-main">
     <div class="blog-post">
-       <h3 class="blog-post-title">{{ p.text_title }}</h3>
-       <p class="blog-post-meta">{{ p.pub_date }} <a href="">投稿者：{{ p.writer }}</a></p>
-       <p>{{ p.experience.main_text }}</p>
+       <h3 class="blog-post-title">{{ posts.text_title }}</h3>
+       <p class="blog-post-meta">投稿日: {{ posts.pub_date }} 、 投稿者：{{ posts.writer }}</p>
+
+       <br>
+          {% for experience in posts.experiencetext_set.all %}
+           <p>{{ experience.main_text }}</p>
+          {% endfor %}
+        <br>
+        <hr>
     </div>
-  {% endfor %}
   {% else %}
      <p>追加された滞在・留学体験記はありません。</p>
   {% endif %}

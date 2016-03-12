@@ -22,7 +22,7 @@
           <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                  <li><a href="{% url 'top_page:index' %}">Home</a></li>
-                 <li class="active"><a href="{% url 'giveinfo:about' %}">About</a></li>
+                 <li><a href="{% url 'giveinfo:about' %}">About</a></li>
                  <li><a href="{% url 'giveinfo:contact' %}">Contact</a></li>
               </ul>
           </div>
@@ -46,52 +46,96 @@
   <div class="whiteback">
 
     <div class="blog-header">
-      <h2 class="blog-title">チュービンゲンについて</h2>
+      <h2 class="blog-title">チュービンゲンってどんな街？</h2>
       <p class="lead blog-description">南ドイツ、黒い森にある小さな大学街、チュービンゲンについてまとめています。</p>
     </div>
-　<hr>
 
-<div class="row">
 
-  <div class="col-sm-8 blog-main">
-　<ul>
- 　<div class="blog-post">
-  　<!-- <h1 class="blog-post-title">当ＨＰについて</h1>
-   　　<p class="blog-post-meta"> --- <a href="#">管理人</a></p> -->
+<!-- START THE FEATURETTES -->
+<!-- START THE FEATURETTES RIGHT FIG -->
+<div class="container">
 
-   　　<p>
-       <dl>
-         {% if posts %}
-         <ul>
-            {% for p in posts %}
-            <hr class="featurette-divider">
+<hr class="featurette-divider">
 
-            <div class="row featurette">
-              <div class="col-md-7">
-                <h2 class="featurette-heading">{{ p.head }} <span class="text-muted">{{ p.subhead }}</span></h2>
-                <p class="lead">{{ p.main_text }}</p>
-              </div>
-              <div class="col-md-5">
-                <img class="featurette-image img-responsive center-block" data-src={{ MEDIA_URL }}{{ p.img }} alt={{ p.head }} />
-              </div>
-            </div>
+<div class="row featurette">
+  <div class="col-md-5">
+    <h2 class="featurette-heading">場所 <span class="text-muted">Location</span></h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+  <div class="col-md-4">
+    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+  </div>
+</div>
 
-            <hr class="featurette-divider">
-            {% endfor %}
-         </ul>
-         {% else %}
-         <p>追加されたまとめはありません。</p>
-         {% endif %}
+</div>
 
-<!--          <dt>人口</dt>
-             <dd>85,000人　（東京都: 10,000,000人、大阪: 2,700,000人、京都: 1,500,000人）</dd>
-          <dt>学生数</dt>
-             <dd>28,400人　（早稲田大学: 55,000人、同志社大学: 29,000人、中央大学: 26,000人）</dd>
-          <dt>住宅価格</dt>
-             <dd>高い順でドイツ6位　(1: München 2: Germering 3: Stuttgart 4: Leinfelden-Echterdingen 5: Dachau)</dd> -->
-　　  </dl>
-    </p>
-　 </div>
-　</ul>
+<!-- START THE FEATURETTES LEFT FIG -->
+<div class="container">
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-5 col-md-push-5">
+    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+  <div class="col-md-5 col-md-pull-5">
+    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+  </div>
+</div>
+
+</div>
+
+<!-- START THE FEATURETTES RIGHT FIG -->
+<div class="container">
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-5">
+    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+  <div class="col-md-4">
+    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+  </div>
+</div>
+
+</div>
+
+<!-- START THE FEATURETTES LEFT FIG -->
+<div class="container">
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-5 col-md-push-5">
+    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+  </div>
+  <div class="col-md-5 col-md-pull-5">
+    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+  </div>
+</div>
+
+</div>
+
+<!-- /END THE FEATURETTES -->
+
+<!-- /JUST SPACING FOR SIDEBARS -->
+    <div class="container">
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-5">
+        <h2 class="featurette-heading"> <span class="text-muted"></span></h2>
+        <p class="lead"></p>
+      </div>
+      <div class="col-md-4">
+
+      </div>
+
+<!-- /END THE FEATURETTES -->
 
 {% endblock %}

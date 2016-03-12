@@ -9,4 +9,6 @@ urlpatterns = [
     url(r'^$',views.index,name='index'),
     # /top_page/positive/
     url(r'^positive/$',views.positive,name='positive'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
+
+#+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
