@@ -59,18 +59,19 @@
 
 <div class="row featurette">
   <div class="col-md-5">
-    <h2 class="featurette-heading">場所 <span class="text-muted">Location</span><span class="text-muted">Ort</span></h2>
+    <h2 class="featurette-heading">場所 <span class="text-muted"> / Location / </span><span class="text-muted">Ort</span></h2>
     <p class="lead">
       <br>
-      南ドイツ、黒い森、Baden-Wüttenerg地方に属する大学街。Stuttgartから電車で1時間程度でつくことができる。
-      距離としてはフルマラソン相当であり、日本から来る場合は　①　フランクフルト、ミュンヘンの国際空港に着く　②　シュトゥットガルトに電車、バス、車相乗りなど、なんらかの方法でたどり着く　
+      <small>南ドイツ、黒い森、Baden-Wüttenerg地方に属する大学街。Stuttgartから電車で1時間程度でつくことができる。
+      距離としてはフルマラソンより若干短いくらい（30km）、日本から来る場合は　①　フランクフルト、ミュンヘンの国際空港に着く　②　シュトゥットガルトに電車、バス、車相乗りなど、なんらかの方法でたどり着く　
       ③　シュトゥットガルト駅からは電車、空港からはバスがでているので、それに乗ってチュービンゲンへ　という流れになる。
 
       高速鉄道ＩＣＥが通っていないのが不便ではあるが、昨今の都市間移動バス増加により、その問題は過去のものとなりつつある。
+    </small>
     </p>
   </div>
   <div class="col-md-4">
-    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    <img class="featurette-image img-responsive center-block" src="{% static 'summary/deutschMap.jpg' %}" alt="deutschland map">
   </div>
 </div>
 
@@ -83,11 +84,17 @@
 
 <div class="row featurette">
   <div class="col-md-5 col-md-push-5">
-    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    <h2 class="featurette-heading">人口 <span class="text-muted"> / Population / </span><span class="text-muted">Einwohner</span></h2>
+    <p class="lead">
+    <br>
+    <small>
+　　89,000人。つまり、だいたい栃木県日光市くらいは人がいることになる。学生数は約1/3にあたる22,000人で、ほぼ同志社大学や中央大学と同じ規模である。
+    東京には900万人、大阪市は270万人、京都市には150万人、広島市には120万人の人がいることをふまえると、やはり田舎である。
+  </small>
+    </p>
   </div>
   <div class="col-md-5 col-md-pull-5">
-    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    <img class="featurette-image img-responsive center-block" src="{% static 'summary/population.jpg' %}" alt="population">
   </div>
 </div>
 
@@ -100,11 +107,18 @@
 
 <div class="row featurette">
   <div class="col-md-5">
-    <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    <h2 class="featurette-heading">観光 <span class="text-muted"> / Sightseeing / </span><span class="text-muted">Besichtigung</span></h2>
+    <p class="lead">
+    <br>
+    <small>
+    基本的には大学と病院があるだけのドイツの田舎であるが、Neckar橋から眺めるNeckar川が美しい。18世紀に活躍したロマン派の詩人Hölderlinが床に伏せるまで、心病みながら36年間住んでいた
+    傾いた家も見える。Altstadt（旧市街）も、ドイツでは珍しく第二次世界大戦で破壊されなかったため、美しい歴史的建築がそのまま保存されている。
+    伝統的なSchwäbischが食べられるレストランがいくつか（Wurstküche, Rose, Neckarmüllerなど）ある。
+  </small>
+    </p>
   </div>
   <div class="col-md-4">
-    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    <img class="featurette-image img-responsive center-block" src="{% static 'summary/kaesespaetzle.jpg' %}" alt="Generic placeholder image">
   </div>
 </div>
 
@@ -117,11 +131,65 @@
 
 <div class="row featurette">
   <div class="col-md-5 col-md-push-5">
-    <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    <h2 class="featurette-heading">大学 <span class="text-muted"> / University / </span><span class="text-muted">Universität</span></h2>
+    <p class="lead">
+    <br>
+    <small>
+    チュービンゲン大学、正式にはEberhard Karls Universität Tübingenという。設立は1477年で、ドイツで最も古い大学のうちの1つである。日本ではやっと応仁の乱
+    が終わったというタイミングである。もともと神学、哲学、歴史、医学に強い大学だが、最近は生物学、化学にも強く、ノーベル賞受賞者も出ている。The Times Higher Education Supplement (2016)
+    によると、世界ランキングは78位。ドイツ国内では6位。なかなかやるのである。
+  </small>
+    </p>
   </div>
   <div class="col-md-5 col-md-pull-5">
-    <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+    <img class="featurette-image img-responsive center-block" src="{% static 'summary/UniTuebingen.jpg' %}" alt="UniTuebingen">
+  </div>
+</div>
+
+</div>
+
+
+<!-- START THE FEATURETTES RIGHT FIG -->
+<div class="container">
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-5">
+    <h2 class="featurette-heading">学生生活 <span class="text-muted"> / Student life / </span><span class="text-muted">Studentenleben</span></h2>
+    <p class="lead">
+    <br>
+    <small>
+    観光できる場所があまりないので、つるむ友達がいないと孤立しネット社会の一員になります。特に、良く知らない外国人とつるむのは大変でしょうが、
+    人に会うのが薬だと思って、1人でいる時間を増やしすぎないのが大事です。
+  </small>
+    </p>
+  </div>
+  <div class="col-md-4">
+    <img class="featurette-image img-responsive center-block" src="{% static 'summary/studentenleben.jpg' %}" alt="studentenleben">
+  </div>
+</div>
+
+</div>
+
+<!-- START THE FEATURETTES LEFT FIG -->
+<div class="container">
+
+<hr class="featurette-divider">
+
+<div class="row featurette">
+  <div class="col-md-5 col-md-push-5">
+    <h2 class="featurette-heading">著名人 <span class="text-muted"> / Celebrity / </span><span class="text-muted">Berühtheit</span></h2>
+    <p class="lead">
+    <br>
+    <small>
+    詩人のHölderlin、アルツハイマー病を発見した神経科学者Alzheimer、遺伝子の正体である核酸を発見したミーシャなど。
+    哲学者ヘーゲル、天文学者ケプラーはチュービンゲン大学で学んだ。
+  </small>
+    </p>
+  </div>
+  <div class="col-md-5 col-md-pull-5">
+    <img class="featurette-image img-responsive center-block" src="{% static 'summary/celebrity.jpg' %}" alt="kepler">
   </div>
 </div>
 
