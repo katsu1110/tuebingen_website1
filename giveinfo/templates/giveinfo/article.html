@@ -65,7 +65,7 @@
 
            <br>
                 {% for article in posts.articletext_set.all %}
-                <p>{{ article.main_text }}</p>
+                <p>{{ article.main_text|linebreaks }}</p>
                 {% endfor %}
            <br>
            <hr>

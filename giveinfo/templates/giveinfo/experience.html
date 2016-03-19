@@ -65,7 +65,7 @@
 
        <br>
           {% for experience in posts.experiencetext_set.all %}
-           <p>{{ experience.main_text }}</p>
+           <p>{{ experience.main_text|linebreaks }}</p>
           {% endfor %}
         <br>
         <hr>
