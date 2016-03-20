@@ -13,16 +13,3 @@ class Whatsnew(models.Model):
 
     def __str__(self):
         return self.news_text
-
-class Positive(models.Model):
-    jp = models.CharField(max_length=100, default='きっといいことあるよ！')
-    de = models.CharField(max_length=100, default='Viel glückwünsche bei dir!')
-    en = models.CharField(max_length=100, default='May you have something wonderful!')
-    pub_date = models.DateTimeField(blank=True, null=True)
-
-    def publish(self):
-        self.pub_date = timezone.now()
-        self.save()
-
-    def __str__(self):
-        return self.jp
