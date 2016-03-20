@@ -7,8 +7,8 @@ from .models import Summary, Experience, Article, Link, Experiencetext, Articlet
 # Create your views here.
 
 def middle(request):
-    experiences = Experience.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
-    articles = Article.objects.filter(pub_date__lte=timezone.now()).order_by('-pub_date')
+    experiences = Experience.objects.filter(pub_date__lte=timezone.now()).order_by('pub_date')
+    articles = Article.objects.filter(pub_date__lte=timezone.now()).order_by('pub_date')
     links = Link.objects.all()
     context = {'experiences':experiences,'articles':articles,'links':links}
     return render(request, 'giveinfo/middle.html',context)
