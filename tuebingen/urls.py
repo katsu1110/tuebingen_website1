@@ -19,9 +19,7 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-#    url(r'^restaurant/',include('restaurant.urls',namespace='restaurant')),
     url(r'^top_page/',include('top_page.urls',namespace='top_page')),
     url(r'^giveinfo/',include('giveinfo.urls',namespace='giveinfo')),
     url(r'^pictures/',include('pictures.urls',namespace='pictures')),
-#    url(r'^tinymce/', include('tinymce.urls')),
 ]
