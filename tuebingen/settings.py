@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'giveinfo',
     'pictures',
 #    'ckeditor',
-#     'tinymce'
+#     'tinymce',
 ]
 
 #DJANGO_WYSIWYG_FLAVOR = "tinymce"
