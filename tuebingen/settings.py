@@ -40,11 +40,7 @@ INSTALLED_APPS = [
     'top_page',
     'giveinfo',
     'pictures',
-#    'ckeditor',
-#     'tinymce',
 ]
-
-#DJANGO_WYSIWYG_FLAVOR = "tinymce"
 
 # MEDIA: Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home2/media/media.lawrence.com/media/"
