@@ -18,7 +18,7 @@ $( '#bkgchange' ).click(function() {
     "../../static/gallary/suzu15.jpg",
     "../../static/gallary/suzu16.jpg",
     "../../static/gallary/me1.jpg",
-    "../../static/gallary/me2.jpg",
+    "../../static/gallary/me3.jpg",
     ];
     var l = array.length;
     var r = Math.floor(Math.random()*l);
