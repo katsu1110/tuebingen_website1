@@ -3,7 +3,6 @@ from django.utils import timezone
 
 # Create your models here.
 class Summary(models.Model):
-#    main_text = HTMLField()
 
     def __str__(self):
         return self.id
