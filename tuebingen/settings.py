@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'top_page',
     'giveinfo',
     'pictures',
+    'stress',
 ]
 
 # MEDIA: Absolute filesystem path to the directory that will hold user-uploaded files.
