@@ -341,21 +341,60 @@
 
     <br>
 
-     <button onclick="myFunction()">Show result</button>
+    <hr>
+    <hr>
 
-     <p id="demo"></p>
+   <div class="row">
+
+    <div class="container">
+
+    　　<h2><center>あなたのポジティブさは……</center></h2>
+      <br>
+      <center><h1><p id="demo"></h1></center>
+      <br>
+
+      <div class="col-sm-1 blog-main">
+      </div>
+
+      <div class="col-sm-9 blog-main">
+      <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="0%">
+        </div>
+      </div>
+    </div>
+
+      </div>
+          <br>
+       <a class="btn btn-success" onclick="showResults()" role="button">結果を見る &raquo;</a>
+    </div>
+
+　　　<br>
 
      <script>
-     function myFunction() {
-         var one = document.getElementById("one").value;
-         var two = document.getElementById("two").value;
-         var three = document.getElementById("three").value;
-         var four = document.getElementById("four").value;
-         var five = document.getElementById("five").value;
-         var six = document.getElementById("six").value;
-         var seven = document.getElementById("seven").value;
-         var eight = document.getElementById("eight").value;
-         document.getElementById("demo").innerHTML = x;
+     function showResults() {
+         var one = parseInt(document.getElementById("one").value);
+         var two = parseInt(document.getElementById("two").value);
+         var three = parseInt(document.getElementById("three").value);
+         var four = parseInt(document.getElementById("four").value);
+         var five = parseInt(document.getElementById("five").value);
+         var six = parseInt(document.getElementById("six").value);
+         var seven = parseInt(document.getElementById("seven").value);
+         var eight = parseInt(document.getElementById("eight").value);
+
+         var w1 = 1;
+         var w2 = -1;
+         var w3 = -1;
+         var w4 = -1;
+         var w5 = 1;
+         var w6 = 1;
+         var w7 = -1;
+         var w8 = 1;
+
+         var numq = 8;
+
+         var point = 50 + Math.round((w1*one+w2*two+w3*three+w4*four+w5*five+w6*six+w7*seven+w8*eight)/numq);
+         document.getElementById("demo").innerHTML = point;
+         return toString(point)
      }
      </script>
 
@@ -385,6 +424,7 @@
 
     <script type="text/javascript">
        $.backstretch("../../../static/gallary/suzu19.jpg");
+       $('.progress-bar').css('width',showResults())
     </script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
