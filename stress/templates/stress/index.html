@@ -12,7 +12,7 @@
     <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   -->
-    <title>自分の対ストレス性能を知る</title>
+    <title>自分の適応能力をチェック</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -49,9 +49,16 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="{% url 'top_page:index' %}">Home</a></li>
+                <li><a href="{% url 'top_page:index' %}">Home</a></li>
                 <li><a href="{% url 'giveinfo:about' %}">About</a></li>
                 <li><a href="{% url 'giveinfo:contact' %}">Contact</a></li>
+                <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Others <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="{% url 'stress:index' %}">適応能力チェック</a></li>
+                </ul>
+              </li>
+             </ul>
 <!--                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -81,8 +88,9 @@
             <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
           </p>
           <header class="jumbotron">
-            <h1>自分の対ストレス性能を測定</h1>
-            <p>あなたの対ストレス性能を、多面的に測定しちゃいます（このコンテンツは、チュービンゲンとなんの関係もありません）。</p>
+            <h1>環境適応能力を測定</h1>
+            <p>あなたの環境適応能力を、多面的に測定しちゃいます。</p>
+            <p><small>（このコンテンツは、チュービンゲンとなんの関係もありません）</small></p>
           </header>
           <div class="row">
             <div class="col-xs-6 col-lg-4">
@@ -119,6 +127,10 @@
               <h2>セイフティーネットチェック</h2>
               <p>頼れる人っている？</p>
               <p><a class="btn btn-success" href="{% url 'stress:check7' %}" role="button">Try! &raquo;</a></p>
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
+            </div><!--/.col-xs-6.col-lg-4-->
+            <div class="col-xs-6 col-lg-4">
             </div><!--/.col-xs-6.col-lg-4-->
           </div><!--/row-->
         </div><!--/.col-xs-12.col-sm-9-->

@@ -88,11 +88,11 @@
     <br>
     <div class="col-sm-6">
       <div class="list-group">
-        <a href="{% url 'stress:check1' %}" button type="button" class="list-group-item active">ポジティブさチェック</button></a>
+        <a href="{% url 'stress:check1' %}" button type="button" class="list-group-item">ポジティブさチェック</button></a>
         <a href="{% url 'stress:check2' %}" button type="button" class="list-group-item">デジタル思考チェック</button></a>
         <a href="{% url 'stress:check3' %}" button type="button" class="list-group-item">ひきずりやすさチェック</button></a>
         <a href="{% url 'stress:check4' %}" button type="button" class="list-group-item">適応力チェック</button></a>
-        <a href="{% url 'stress:check5' %}" button type="button" class="list-group-item">共感力チェック</button></a>
+        <a href="{% url 'stress:check5' %}" button type="button" class="list-group-item active">共感力チェック</button></a>
         <a href="{% url 'stress:check6' %}" button type="button" class="list-group-item">情動制御力チェック</button></a>
         <a href="{% url 'stress:check7' %}" button type="button" class="list-group-item">セイフティーネットチェック</button></a>
       </div>
@@ -117,7 +117,7 @@
     <div class="col-sm-12">
       <div class="alert alert-success" role="alert">
         <ul>
-          <li>8つの簡単な質問に、スケールバーを動かすことで、どのくらいあてはまるかをお答えください。</li>
+          <li>１０の簡単な質問に、スケールバーを動かすことで、どのくらいあてはまるかをお答えください。</li>
           <li>あまり考えず、直感的に回答してください。</li>
         </ul>
       </div>
@@ -132,9 +132,9 @@
 <div class="blog-post">
 
   <hr>
-      <div class="container">
+  <div class="container">
       　 <p><strong>Question 1:</strong></p>
-         <FONT size="5"><strong>上手くいかないことがあっても、成功を信じて進んでいける。</strong></FONT>
+         <FONT size="5"><strong>人と一緒にいることが好き。</strong></FONT>
          <br>
 
          <br>
@@ -164,7 +164,7 @@
 
       <div class="container">
       　 <p><strong>Question 2:</strong></p>
-         <FONT size="5"><strong>幸せよりも、不満を感じることが多い。</strong></FONT>
+         <FONT size="5"><strong>利益は独り占めより、みんなと分かち合いたい。</strong></FONT>
          <br>
 
          <br>
@@ -195,7 +195,7 @@
 
     <div class="container">
     　 <p><strong>Question 3:</strong></p>
-       <FONT size="5"><strong>人の長所よりも、短所に目がいきがちだ。</strong></FONT>
+       <FONT size="5"><strong>人間って素晴らしい。</strong></FONT>
        <br>
 
        <br>
@@ -226,7 +226,7 @@
 
     <div class="container">
     　 <p><strong>Question 4:</strong></p>
-       <FONT size="5"><strong>自分は劣った人間だと思うことがよくある。</strong></FONT>
+       <FONT size="5"><strong>相手の気持ちになって話ができる。</strong></FONT>
        <br>
 
        <br>
@@ -257,7 +257,7 @@
 
     <div class="container">
     　 <p><strong>Question 5:</strong></p>
-       <FONT size="5"><strong>楽しい話をしたり、よく笑ったりする。</strong></FONT>
+       <FONT size="5"><strong>困っている人は放っておけない。</strong></FONT>
        <br>
 
        <br>
@@ -288,7 +288,7 @@
 
     <div class="container">
     　 <p><strong>Question 6:</strong></p>
-       <FONT size="5"><strong>自分は恵まれていると思う。</strong></FONT>
+       <FONT size="5"><strong>人から相談を受けることが多い。</strong></FONT>
        <br>
 
        <br>
@@ -319,7 +319,7 @@
 
     <div class="container">
     　 <p><strong>Question 7:</strong></p>
-       <FONT size="5"><strong>どうせ自分の人生はうまくいかないと思うことがある。</strong></FONT>
+       <FONT size="5"><strong>人と協力して物事を進めていくのが好き。</strong></FONT>
        <br>
 
        <br>
@@ -347,10 +347,9 @@
 
     <br>
 
-
     <div class="container">
     　 <p><strong>Question 8:</strong></p>
-       <FONT size="5"><strong>現在の暮らしに満足や感謝を覚えることが多い。</strong></FONT>
+       <FONT size="5"><strong>信じられる人が3人以上いる。</strong></FONT>
        <br>
 
        <br>
@@ -378,6 +377,67 @@
 
     <br>
 
+    <div class="container">
+        　 <p><strong>Question 9:</strong></p>
+           <FONT size="5"><strong>悲しそうな人を見ると、悲しい気持ちになる。</strong></FONT>
+           <br>
+
+           <br>
+
+           <div class="col-sm-1 blog-main">
+           </div>
+           <div class="col-sm-8 blog-main">
+              <input type="range" id="nine" value="50">
+           </div>
+           <div class="col-sm-1 blog-main">
+           </div>
+
+           <br>
+             <div class="col-sm-2 blog-main">
+             </div>
+             <div class="col-sm-3 blog-main">
+                <p><small>&larr; 当てはまらない </small>
+             </div>
+             <div class="col-sm-1 blog-main">
+             </div>
+             <div class="col-sm-4 blog-main">
+                 <small>当てはまる &rarr;</small></p>
+             </div>
+        </div>
+
+        <br>
+
+    <div class="container">
+        　 <p><strong>Question 10:</strong></p>
+           <FONT size="5"><strong>一人でする遊びはあまり好きではない。</strong></FONT>
+           <br>
+
+           <br>
+
+           <div class="col-sm-1 blog-main">
+           </div>
+           <div class="col-sm-8 blog-main">
+              <input type="range" id="ten" value="50">
+           </div>
+           <div class="col-sm-1 blog-main">
+           </div>
+
+           <br>
+             <div class="col-sm-2 blog-main">
+             </div>
+             <div class="col-sm-3 blog-main">
+                <p><small>&larr; 当てはまらない </small>
+             </div>
+             <div class="col-sm-1 blog-main">
+             </div>
+             <div class="col-sm-4 blog-main">
+                 <small>当てはまる &rarr;</small></p>
+             </div>
+        </div>
+
+        <br>
+
+
     <hr>
     <hr>
 
@@ -385,7 +445,7 @@
 
     <div class="container">
 
-    　　<h2><center>あなたのポジティブさは……</center></h2>
+    　　<h2><center>あなたの共感力は……</center></h2>
       <br>
       <center><h1><p id="demo"></h1></center>
       <br>
@@ -414,7 +474,7 @@
        </div>
        <div class="col-sm-9 blog-main">
          <a class="list-group-item active list-group-item-success">
-           <h3 class="list-group-item-heading" id="determination"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true">結果</span></h3></a>
+           <h3 class="list-group-item-heading" id="determination"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true">　結果</span></h3></a>
          <ul class="list-group">
            <li class="list-group-item">
              <p id="tip"></p>
@@ -438,37 +498,42 @@
          var six = parseInt(document.getElementById("six").value);
          var seven = parseInt(document.getElementById("seven").value);
          var eight = parseInt(document.getElementById("eight").value);
+         var nine = parseInt(document.getElementById("nine").value);
+         var ten = parseInt(document.getElementById("ten").value);
 
          var w1 = 1;
-         var w2 = -1;
-         var w3 = -1;
-         var w4 = -1;
+         var w2 = 1;
+         var w3 = 1;
+         var w4 = 1;
          var w5 = 1;
          var w6 = 1;
-         var w7 = -1;
+         var w7 = 1;
          var w8 = 1;
+         var w9 = 1;
+         var w10 = 1;
 
-         var numq = 8;
+         var numq = 10;
 
-         var point = 50 + Math.round((w1*one+w2*two+w3*three+w4*four+w5*five+w6*six+w7*seven+w8*eight)/numq);
+         var point = Math.round((w1*one + w2*two + w3*three + w4*four + w5*five + w6*six + w7*seven + w8*eight + w9*nine + w10*ten)/numq);
 
-         $('.progress-bar').css('width', point +'%').attr('aria-valuenow', point);
          document.getElementById("demo").innerHTML = point;
+         $('.progress-bar').css('width', point +'%').attr('aria-valuenow', point);
 
-         if(point>50){
-           document.getElementById("determination").innerHTML = "どちらかというとポジティブな傾向があります";
-           document.getElementById("tip").innerHTML = "ストレスに対する受け止め方もポジティブなので、気持ちも安定しているでしょう。傷ついても回復が早いでしょう。" +
-           "対人関係も安定し、周りの人にフレンドリーに接することが得意かもしれません";
+         if(point>=60){
+           document.getElementById("determination").innerHTML = "共感性が高い傾向があります。";
+           document.getElementById("tip").innerHTML = "他者を助け、関わりを持とうとする傾向が強く、人を信じることができる人ですね。" +
+           "嫌なことがあっても、それを攻撃と一面的に認めず、相手の立場も考慮に入れてとらえようとするので、ダメージが少なくて済むでしょう。";
          }
-         else if(point==50){
-           document.getElementById("determination").innerHTML = "ポジティブでもネガティブでもどちらとも言えません";
-           document.getElementById("tip").innerHTML = "自分の感情の調整がうまくいっているのかもしれません。対人関係において、必要以上に攻撃的、防衛的になったり、" +
-           "表向きの自分と内面の自分にギャップがあっても、傷つきすぎず、心を戻していける人だと思われます。";
+         else if(point<=30){
+           document.getElementById("determination").innerHTML = "共感性が低い傾向があります。";
+           document.getElementById("tip").innerHTML = "他人と関わろうという意欲が低く、周りに味方が少ないと思いがちかもしれません。" +
+           "些細なことも攻撃と受け止めてしまい、被害意識を強く感じ、ダメージを大きくしてしまいがちです。嫌なことがあっても、相手の立場を考慮し、" +
+           "一方的に攻撃だと受け止めないようにできるといいですね。";
          }
          else{
-           document.getElementById("determination").innerHTML = "どちらかというとネガティブな傾向があります";
-           document.getElementById("tip").innerHTML = "ストレスに対して傷つきやすく、表面上は平気を装っていても、内面は反発や攻撃性を抱えやすいかもしれません。" +
-           "対人関係は不安定なことが多く、傷ついてから回復するのも遅めかもしれません。そういう面がもしあるなら、意識して、不必要に長く落ち込まないようにしましょう。";
+           document.getElementById("determination").innerHTML = "共感性は高くも低くもないようです。";
+           document.getElementById("tip").innerHTML = "他人と関わることが得意でも苦手でもないようです。" +
+           "他人を助けることもでき、傷つけられても、相手の立場を考慮でき、ダメージを少なくできるかもしれません。";
          }
 
      }
@@ -484,7 +549,7 @@
     <!-- footer -->
       <footer class="blog-footer">
        <p>
-          <a href="{% url 'stress:check1' %}">
+          <a href="{% url 'stress:check5' %}">
             <p class="text-center">Back to top (回答結果はクリアされます)</p>
           </a>
        </p>

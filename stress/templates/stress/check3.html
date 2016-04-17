@@ -88,9 +88,9 @@
     <br>
     <div class="col-sm-6">
       <div class="list-group">
-        <a href="{% url 'stress:check1' %}" button type="button" class="list-group-item active">ポジティブさチェック</button></a>
+        <a href="{% url 'stress:check1' %}" button type="button" class="list-group-item">ポジティブさチェック</button></a>
         <a href="{% url 'stress:check2' %}" button type="button" class="list-group-item">デジタル思考チェック</button></a>
-        <a href="{% url 'stress:check3' %}" button type="button" class="list-group-item">ひきずりやすさチェック</button></a>
+        <a href="{% url 'stress:check3' %}" button type="button" class="list-group-item active">ひきずりやすさチェック</button></a>
         <a href="{% url 'stress:check4' %}" button type="button" class="list-group-item">適応力チェック</button></a>
         <a href="{% url 'stress:check5' %}" button type="button" class="list-group-item">共感力チェック</button></a>
         <a href="{% url 'stress:check6' %}" button type="button" class="list-group-item">情動制御力チェック</button></a>
@@ -117,7 +117,7 @@
     <div class="col-sm-12">
       <div class="alert alert-success" role="alert">
         <ul>
-          <li>8つの簡単な質問に、スケールバーを動かすことで、どのくらいあてはまるかをお答えください。</li>
+          <li>６つの簡単な質問に、スケールバーを動かすことで、どのくらいあてはまるかをお答えください。</li>
           <li>あまり考えず、直感的に回答してください。</li>
         </ul>
       </div>
@@ -132,9 +132,9 @@
 <div class="blog-post">
 
   <hr>
-      <div class="container">
+  <div class="container">
       　 <p><strong>Question 1:</strong></p>
-         <FONT size="5"><strong>上手くいかないことがあっても、成功を信じて進んでいける。</strong></FONT>
+         <FONT size="5"><strong>辛いことがあっても、すぐに忘れられる。</strong></FONT>
          <br>
 
          <br>
@@ -164,7 +164,7 @@
 
       <div class="container">
       　 <p><strong>Question 2:</strong></p>
-         <FONT size="5"><strong>幸せよりも、不満を感じることが多い。</strong></FONT>
+         <FONT size="5"><strong>同じことをくよくよ考えてしまう。</strong></FONT>
          <br>
 
          <br>
@@ -195,7 +195,7 @@
 
     <div class="container">
     　 <p><strong>Question 3:</strong></p>
-       <FONT size="5"><strong>人の長所よりも、短所に目がいきがちだ。</strong></FONT>
+       <FONT size="5"><strong>ケンカをしても、すぐに仲直りできる。</strong></FONT>
        <br>
 
        <br>
@@ -226,7 +226,7 @@
 
     <div class="container">
     　 <p><strong>Question 4:</strong></p>
-       <FONT size="5"><strong>自分は劣った人間だと思うことがよくある。</strong></FONT>
+       <FONT size="5"><strong>嫌なことがあると、何日も引きずってしまう。</strong></FONT>
        <br>
 
        <br>
@@ -257,7 +257,7 @@
 
     <div class="container">
     　 <p><strong>Question 5:</strong></p>
-       <FONT size="5"><strong>楽しい話をしたり、よく笑ったりする。</strong></FONT>
+       <FONT size="5"><strong>人に言われたことをいつまでも覚えている方だ。</strong></FONT>
        <br>
 
        <br>
@@ -288,7 +288,7 @@
 
     <div class="container">
     　 <p><strong>Question 6:</strong></p>
-       <FONT size="5"><strong>自分は恵まれていると思う。</strong></FONT>
+       <FONT size="5"><strong>嫌なことより、楽しいことを考えることが多い。</strong></FONT>
        <br>
 
        <br>
@@ -317,9 +317,9 @@
     <br>
 
 
-    <div class="container">
+  <!--  <div class="container">
     　 <p><strong>Question 7:</strong></p>
-       <FONT size="5"><strong>どうせ自分の人生はうまくいかないと思うことがある。</strong></FONT>
+       <FONT size="5"><strong>平凡な人生より、特別な人になりたい。</strong></FONT>
        <br>
 
        <br>
@@ -350,7 +350,7 @@
 
     <div class="container">
     　 <p><strong>Question 8:</strong></p>
-       <FONT size="5"><strong>現在の暮らしに満足や感謝を覚えることが多い。</strong></FONT>
+       <FONT size="5"><strong>白黒をはっきりつけないと気持ちが悪い。</strong></FONT>
        <br>
 
        <br>
@@ -374,7 +374,7 @@
          <div class="col-sm-4 blog-main">
              <small>当てはまる &rarr;</small></p>
          </div>
-    </div>
+    </div>　-->
 
     <br>
 
@@ -385,7 +385,7 @@
 
     <div class="container">
 
-    　　<h2><center>あなたのポジティブさは……</center></h2>
+    　　<h2><center>あなたのひきずりやすさは……</center></h2>
       <br>
       <center><h1><p id="demo"></h1></center>
       <br>
@@ -436,39 +436,32 @@
          var four = parseInt(document.getElementById("four").value);
          var five = parseInt(document.getElementById("five").value);
          var six = parseInt(document.getElementById("six").value);
-         var seven = parseInt(document.getElementById("seven").value);
-         var eight = parseInt(document.getElementById("eight").value);
 
          var w1 = 1;
          var w2 = -1;
-         var w3 = -1;
+         var w3 = 1;
          var w4 = -1;
-         var w5 = 1;
+         var w5 = -1;
          var w6 = 1;
-         var w7 = -1;
-         var w8 = 1;
 
-         var numq = 8;
+         var numq = 6;
 
-         var point = 50 + Math.round((w1*one+w2*two+w3*three+w4*four+w5*five+w6*six+w7*seven+w8*eight)/numq);
+         var point = 50 + Math.round((w1*one+w2*two+w3*three+w4*four+w5*five+w6*six)/numq);
 
          $('.progress-bar').css('width', point +'%').attr('aria-valuenow', point);
          document.getElementById("demo").innerHTML = point;
 
-         if(point>50){
-           document.getElementById("determination").innerHTML = "どちらかというとポジティブな傾向があります";
-           document.getElementById("tip").innerHTML = "ストレスに対する受け止め方もポジティブなので、気持ちも安定しているでしょう。傷ついても回復が早いでしょう。" +
-           "対人関係も安定し、周りの人にフレンドリーに接することが得意かもしれません";
-         }
-         else if(point==50){
-           document.getElementById("determination").innerHTML = "ポジティブでもネガティブでもどちらとも言えません";
-           document.getElementById("tip").innerHTML = "自分の感情の調整がうまくいっているのかもしれません。対人関係において、必要以上に攻撃的、防衛的になったり、" +
-           "表向きの自分と内面の自分にギャップがあっても、傷つきすぎず、心を戻していける人だと思われます。";
+         if(point>=50){
+           document.getElementById("determination").innerHTML = "否定的な体験にとらわれやすい傾向があります。";
+           document.getElementById("tip").innerHTML = "こだわりやとらわれが強く、否定的経験を引きずりダメージを大きくしがちかもしれません。" +
+           "人に対して不信感を抱くことも多いかもしれません。辛いことの多くは、自分の責任ではないのに誰かによってもたらされます。でも、" +
+           "その経験を引きずり、何度も思い出して自分を不快にするのは、自分です。自分で自分を追い詰めないようにして、少なくとも自分が自分を傷つけない"　+
+           "ようにできるといいですね。";
          }
          else{
-           document.getElementById("determination").innerHTML = "どちらかというとネガティブな傾向があります";
-           document.getElementById("tip").innerHTML = "ストレスに対して傷つきやすく、表面上は平気を装っていても、内面は反発や攻撃性を抱えやすいかもしれません。" +
-           "対人関係は不安定なことが多く、傷ついてから回復するのも遅めかもしれません。そういう面がもしあるなら、意識して、不必要に長く落ち込まないようにしましょう。";
+           document.getElementById("determination").innerHTML = "否定的体験をしても、切り替えて進むことが上手な傾向があります。";
+           document.getElementById("tip").innerHTML = "嫌なことがあっても、切り替えてダメージを最小限にできる人だと思います。" +
+           "結果的に人に不信感を抱いたり、自分の不幸を呪ったりせず、前へ進んでいけるかもしれません。";
          }
 
      }
@@ -484,7 +477,7 @@
     <!-- footer -->
       <footer class="blog-footer">
        <p>
-          <a href="{% url 'stress:check1' %}">
+          <a href="{% url 'stress:check3' %}">
             <p class="text-center">Back to top (回答結果はクリアされます)</p>
           </a>
        </p>
