@@ -21,6 +21,8 @@ urlpatterns = [
     url(r'^check6/$',views.check6,name='check6'),
     # /stress/check1/
     url(r'^check7/$',views.check7,name='check7'),
+    # /stress/johari/
+    url(r'^johari/$',views.johari,name='johari'),
     ]
 
     #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

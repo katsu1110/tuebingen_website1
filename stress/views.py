@@ -24,3 +24,6 @@ def check6(request):
 
 def check7(request):
     return render(request, 'stress/check7.html')
+
+def johari(request):
+    return render(request, 'stress/johari.html')
