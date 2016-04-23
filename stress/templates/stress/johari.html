@@ -21,53 +21,6 @@
     <!-- Custom styles for this template -->
     <link href="{% static 'css/blog_edited.css' %}" rel="stylesheet">
 
-    <!-- chart -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
-    <script>
-    window.onload = function(){
-      // johari.js
-
-      var one = parseInt(document.getElementById("one").value);
-      var two = parseInt(document.getElementById("two").value);
-
-      var chart = new CanvasJS.Chart("chartContainer", {
-
-        axisX:{
-           minimum: 0,
-           maximum: 100,
-           interval: 10,
-           gridColor: "lightblue" ,
-           gridThickness: 2
-         },
-         axisY:{
-           minimum: 0,
-           maximum: 100,
-           interval: 10,
-           gridColor: "lightgreen",
-           gridThickness: 2
-         },
-         data: [{
-                 indexLabelLineColor: "blue",
-                 type: "line" ,
-                 dataPoints : [
-                   { x: 0, y: two },
-                   { x: 100, y: two },
-                 ]
-               },
-               {
-                 indexLabelLineColor: "green",
-                 type: "line" ,
-                 dataPoints : [
-                   { x: one, y: 0 },
-                   { x: one, y: 100 },
-                 ]
-               }
-             ]
-           });
-         chart.render();
-    }
-    </script>
-
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
@@ -194,17 +147,178 @@
 
   </div>
 
+  <br>
+  <br>
+  <br>
+  <div class="col-sm-6 blog-main">
+  </div>
+  <div class="col-sm-6 blog-main">
+    <a class="btn btn-success" id="run" role="button" value="Show Div" onclick="showDiv()">結果を見る &raquo;</a>
+  </div>
+
+  <br>
+  <br>
 
   <hr>
+
+  <br>
+
+    <div class="row">
       <div class="container">
-         <div id="chartContainer" style="height: 600px; width: 600px;"></div>
+
+        <div class="col-sm-2 blog-main">
+        </div>
+        <div class="col-sm-9 blog-main">
+         <div id="chartContainer" style="height: 400px; width: 400px;"></div>
+      </div>
+      <div class="col-sm-1 blog-main">
       </div>
 
-      <a class="btn btn-success" onclick="showResults()" role="button">結果を見る &raquo;</a>
+    </div>
+
+    <br>
+
+    <div id="welcomeDiv"  style="display:none;" class="answer_list" >
+
+        <div id="explanation"></div>
+
+        <br>
+
+        <div id="tip"></div>
+
+        <br>
+
+        <ul>
+          <dt>あなたの開示度は・・・<h3 id="open"></h3>です</dt>
+            <dd><p id="openExp"></p></dd>
+          <dt>あなたの盲目度は・・・<p id="blind"></p>です</dt>
+            <dd><p id="blindExp"></p></dd>
+          <dt>あなたの秘密度は・・・<p id="secret"></p>です</dt>
+            <dd><p id="secretExp"></p></dd>
+          <dt>あなたの未知度は・・・<p id="unknown"></p>です</dt>
+            <dd><p id="unknownExp"></p></dd>
+        </ul>
+
+    </div>
+<!--    <div class="progress">
+      <div class="progress-bar progress-bar-primary" role="progressbar" style="width:25%">
+        Free Space
+      </div>
+      <div class="progress-bar progress-bar-success" role="progressbar" style="width:25%">
+        Free Space
+      </div>
+      <div class="progress-bar progress-bar-warning" role="progressbar" style="width:25%">
+        Warning
+      </div>
+      <div class="progress-bar progress-bar-danger" role="progressbar" style="width:25%">
+        Danger
+      </div>
+    </div>  -->
 
     </div>
 
 　　　<br>
+
+<!-- chart -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+<script language="javascript">
+function johari(){
+  // johari.js
+
+  var one = parseInt(document.getElementById("one").value);
+  var two = parseInt(document.getElementById("two").value);
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+
+    axisX:{
+       minimum: 0,
+       maximum: 100,
+       interval: 10,
+       gridColor: "#FFBFD5",
+       title: "あなたが知っているあなた",
+       titleFontSize: 15,
+       gridThickness: 3,
+     },
+     axisY:{
+       minimum: 0,
+       maximum: 100,
+       interval: 10,
+       gridColor: "lightblue",
+       title: "あなたの周りが知っているあなた",
+       titleFontSize: 15,
+       gridThickness: 3,
+     },
+     data: [{
+             indexLabelLineColor: "blue",
+             type: "line" ,
+             lineThickness: 5,
+             dataPoints : [
+               { x: 0, y: two },
+               { x: 100, y: two },
+             ]
+           },
+           {
+             indexLabelLineColor: "green",
+             type: "line" ,
+             lineThickness: 5,
+             dataPoints : [
+               { x: one, y: 0 },
+               { x: one, y: 100 },
+             ]
+           }
+         ]
+       });
+     chart.render();
+}
+
+var runButton = document.getElementById("run");
+runButton.addEventListener("click", johari);
+
+var open = Math.round(one*(100-two)/100);
+var blind = Math.round((100-one)*(100-two)/100);
+var secret = Math.round(one*two/100);
+var unknown = Math.round((100-one)*two/100);
+
+document.getElementById("explanation").innerHTML = "ジョハリの窓は、自分が" +
+"どのようなコミュニケーションをしているかを知るためのテストです。自分、というものを、開示、盲点、" +
+"秘密、未知の4つの側面に分類し、自分と他者とのかかわり方に関する理解を深めます。本来はあなたを知っている複数の他者" +
+"を含めて行いますが、今回は簡単な自己診断バージョンをやっていただきました。";
+
+if(one>two+25){
+  document.getElementById("tip").innerHTML = "自分のことをあまり周りに開示しない人ですか？" +
+  "相手の質問に、自分の情報を加えて返すなど、もっとオープンに自分を出していけるといいかもしれないです。";
+}
+else if(two>one+25){
+  document.getElementById("tip").innerHTML = "周りからの指摘にはっとすることが多いですか？" +
+  "相手の求める自分になるのではなく、たまには自分の思い、願いを、自分に問いかける時間を作れるといいかもしれないです。";
+}
+else{
+  document.getElementById("tip").innerHTML = "自分が知っている自分と、周りが知っている自分のバランスがとれているようです。";
+}
+
+document.getElementById("open").innerHTML = open;
+document.getElementById("blind").innerHTML = blind;
+document.getElementById("secret").innerHTML = secret;
+document.getElementById("unknown").innerHTML = unknown;
+
+document.getElementById("openExp").innerHTML = "グラフの" +
+"左上の四角が「開示の領域」で、あなたも周りも知っているあなたのこと（パブリックヒストリー）を表します。これが縦横のバランスよく" +
+"広がっていれば、きっとあなたは周りとのコミュニケーションがうまくいっていて、幸せを感じていることと思います。";
+document.getElementById("blindExp").innerHTML = "グラフの右上の四角が" +
+"「盲目の領域」で、あなたは知らないけれど周りは知っているあなたのことを表します。例えば、どうしてもなじめない集団とかってないですか？" +
+"そこでは、あなたの知らない何かがあなたに不足していて、それが理由であなたが拒絶されているのかもしれません。";
+document.getElementById("secretExp").innerHTML = "グラフの左下の四角が「秘密の領域」で、あなたは知っているけれども周りはしらない" +
+"あなたのことを表します。文字通り、あなたが秘密にし、周りに隠していることです。";
+document.getElementById("unknownExp").innerHTML = "グラフの右下の四角が「未知の領域」で、だれも知らないあなたのことです。そこに何があるのかは、" +
+"今のところ誰にもわかりません。";
+
+</script>
+
+<script>
+function showDiv() {
+   document.getElementById('welcomeDiv').style.display = "block";
+}
+</script>
 
       </div><!-- /.row -->
 
