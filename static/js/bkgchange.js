@@ -21,6 +21,7 @@ $( '#bkgchange' ).click(function() {
     "../../static/gallary/masa4.jpg",
     "../../static/gallary/masa5.jpg",
     "../../static/gallary/masa6.jpg",
+    "../../static/gallary/masa7.jpg",
     ];
     var l = array.length;
     var r = Math.floor(Math.random()*l);
