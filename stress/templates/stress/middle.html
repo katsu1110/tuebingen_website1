@@ -1,5 +1,6 @@
 {% extends 'giveinfo/index.html' %}
 {% load staticfiles %}
+
 {% block content %}
 
 <!-- Bootstrap core CSS -->
@@ -30,7 +31,7 @@
           <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                  <li><a href="{% url 'top_page:index' %}">Home</a></li>
-                 <li><a href="{% url 'giveinfo:about' %}">About</a></li>
+                 <li class="active"><a href="{% url 'giveinfo:about' %}">About</a></li>
                  <li><a href="{% url 'giveinfo:contact' %}">Contact</a></li>
               </ul>
           </div>
@@ -39,12 +40,11 @@
    </div>
   </div>
 
-  <!-- content
-  ================================================== -->
+
   <div class="container">
     <div class="whiteback">
 
-  <!--     <img src="{% static 'images/links.jpg' %}" class="img-responsive center-block" alt="building"> -->
+       <img src="{% static 'gallary/masa2.jpg' %}" class="img-responsive center-block" alt="building">
 
     </div>
   </div>
@@ -56,8 +56,8 @@
   <div class="whiteback">
 
   <div class="blog-header">
-    <h1 class="blog-title">生活お役立ち情報</h1>
-    <p class="lead blog-description">リンク集</p>
+    <h1 class="blog-title">その他（主に心理テスト）</h1>
+    <p class="lead blog-description">環境適応力チェッカー　/　ジョハリの窓　/　渡し舟</p>
   </div>
 　<hr>
 
@@ -65,38 +65,30 @@
 
     <div class="col-sm-8 blog-main">
     <div class="blog-post">
-       <h3 class="blog-post-title">Links</h3>
-       <!--<p class="blog-post-meta">{{ pub_date }} <a href="#">{{ writer }}</a></p> -->
+       <h3 class="blog-post-title">環境適応能力チェッカー</h3>
+       <p class="blog-post-meta"><a href="{% url 'stress:index' %}">  Let's do it! </a></p>
 
-       <br>
+       <p>海外留学・滞在って大変ですよね。自分の環境適応力を知ることが、よりよい海外生活への一歩かもしれませんよ？</p>
+      <br>
+    </div><!-- /.blog-post -->
+    <hr>
 
-          　　<p>
-              <dl>
-                {% if posts %}
-                <ul>
-                   {% for p in posts %}
-                   <li>
-                      <dl>
-                         <dt><a href="{{ p.urllink }}" target="_blank">{{ p.link_title }}</a></dt>
-                         <dd>{{ p.link_text }}</dd>
-                      </dl>
-                      <br>
-                  </li>
-                   {% endfor %}
-                </ul>
-                {% else %}
-                <p>追加されたリンクはありません。</p>
-                {% endif %}
+    <div class="blog-post">
+       <h3 class="blog-post-title">ジョハリの窓</h3>
+       <p class="blog-post-meta"><a href="{% url 'stress:johari' %}">  Let's do it! </a></p>
 
-       <!--          <dt>人口</dt>
-                    <dd>85,000人　（東京都: 10,000,000人、大阪: 2,700,000人、京都: 1,500,000人）</dd>
-                 <dt>学生数</dt>
-                    <dd>28,400人　（早稲田大学: 55,000人、同志社大学: 29,000人、中央大学: 26,000人）</dd>
-                 <dt>住宅価格</dt>
-                    <dd>高い順でドイツ6位　(1: München 2: Germering 3: Stuttgart 4: Leinfelden-Echterdingen 5: Dachau)</dd> -->
-       　　  </dl>
-           </p>
-       　 </div>
-       　</ul>
+       <p>自分が知っているあなた、周りが知っているあなた。どのくらい自分を周りに出していますか？</p>
+      <br>
+    </div><!-- /.blog-post -->
+    <hr>
+
+    <div class="blog-post">
+       <h3 class="blog-post-title">渡し舟</h3>
+       <p class="blog-post-meta"><a href="{% url 'stress:watari' %}">  Let's do it! </a></p>
+
+       <p>今のあなたが、人生において大切にしているものって何でしょう。見えていますか？</p>
+      <br>
+    </div><!-- /.blog-post -->
+    <hr>
 
 {% endblock %}

@@ -27,3 +27,9 @@ def check7(request):
 
 def johari(request):
     return render(request, 'stress/johari.html')
+
+def watari(request):
+    return render(request, 'stress/watari.html')
+
+def middle(request):
+    return render(request, 'stress/middle.html')

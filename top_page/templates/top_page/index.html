@@ -69,13 +69,6 @@
                 <li class="active"><a href="{% url 'top_page:index' %}">Home</a></li>
                 <li><a href="{% url 'giveinfo:about' %}">About</a></li>
                 <li><a href="{% url 'giveinfo:contact' %}">Contact</a></li>
-                <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Others <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="{% url 'stress:index' %}">適応能力チェック</a></li>
-                  <li><a href="{% url 'stress:johari' %}">ジョハリの窓</a></li>
-                </ul>
-              </li>
              </ul>
 <!--                <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -135,6 +128,16 @@
               <h1>写真館</h1>
               <p>有志によって集められた、四季折々の街の様子・・・</p>
               <p><a class="btn btn-lg btn-success" href="{% url 'pictures:index' %}" role="button">見てみる</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide img-responsive center-block" src="{% static "gallary/masa2.jpg" %}" alt="Fourth slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>その他もろもろ</h1>
+              <p>チュービンゲンに関係ない、心理テストアプリなどなど...</p>
+              <p><a class="btn btn-lg btn-success" href="{% url 'stress:middle' %}" role="button">見てみる</a></p>
             </div>
           </div>
         </div>
@@ -225,6 +228,12 @@
           <h2>写真館</h2>
           <p>有志の方々から集められた、チュービンゲンの四季折々の写真はこちら。</p>
           <p><a class="btn btn-success" href="{% url 'pictures:index' %}" role="button">見てみる &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{% static "gallary/masa2.jpg" %}" alt="picture of child" width=140 height=140>
+          <h2>その他もろもろ</h2>
+          <p>心理テストなど、チュービンゲンに関連のないものはこちら。</p>
+          <p><a class="btn btn-success" href="{% url 'stress:middle' %}" role="button">見てみる &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
     </div><!-- /.whiteback -->
