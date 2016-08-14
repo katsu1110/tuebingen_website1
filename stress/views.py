@@ -33,3 +33,24 @@ def watari(request):
 
 def middle(request):
     return render(request, 'stress/middle.html')
+
+def cognitive(request):
+    return render(request, 'stress/cognitive.html')
+
+def check_fae(request):
+    return render(request, 'stress/check_fae.html')
+
+def check_con(request):
+    return render(request, 'stress/check_con.html')
+
+def check_sel(request):
+    return render(request, 'stress/check_sel.html')
+
+def check_bel(request):
+    return render(request, 'stress/check_bel.html')
+
+def check_fra(request):
+    return render(request, 'stress/check_fra.html')
+
+def check_hin(request):
+    return render(request, 'stress/check_hin.html')
