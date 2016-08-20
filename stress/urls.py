@@ -29,18 +29,6 @@ urlpatterns = [
     url(r'^watari/$',views.watari,name='watari'),
     # /stress/cognitive/
     url(r'^cognitive/$',views.cognitive,name='cognitive'),
-    # /stress/check_fae/
-    url(r'^fae/$',views.check_fae,name='check_fae'),
-    # /stress/check_con/
-    url(r'^con/$',views.check_con,name='check_con'),
-    # /stress/check_sel/
-    url(r'^sel/$',views.check_sel,name='check_sel'),
-    # /stress/check_bel/
-    url(r'^bel/$',views.check_bel,name='check_bel'),
-    # /stress/check_fra/
-    url(r'^fra/$',views.check_fra,name='check_fra'),
-    # /stress/check_hin/
-    url(r'^hin/$',views.check_hin,name='check_hin'),
     ]
 
     #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
