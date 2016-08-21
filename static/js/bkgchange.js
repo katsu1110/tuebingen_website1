@@ -32,6 +32,7 @@ $( '#bkgchange' ).click(function() {
     var imgurl = array[r];
     $("body").css({
       'background-size': "cover",
+      'background-position' : "center",
       'background-attachment': "fixd",
       'background-image': ('url("'+imgurl+'")')});
 

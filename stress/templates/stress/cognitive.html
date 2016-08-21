@@ -8,23 +8,22 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{% static 'favicon_tue.ico' %}">
-    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-  -->
-    <title>自分の適応能力をチェック</title>
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+    <title>チュービンゲン情報</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="{% static 'css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/blog_edited.css' %}" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
-
-　　<link href="{% static 'css/offcanvas_edited.css' %}" rel="stylesheet">
-
-<!-- Bootstrap core CSS -->
-<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<link href="{% static 'css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -32,457 +31,591 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+    <body>
+<!--      <div style="background-color:#F9F9F9;"> -->
 
-  <body>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-77355375-1', 'auto');
+  ga('send', 'pageview');
 
-      ga('create', 'UA-77355375-1', 'auto');
-      ga('send', 'pageview');
+</script>
 
-    </script>
+<!-- NAVBAR
+================================================== -->
+  <div class="navbar-wrapper">
+    <div class="container">
 
-    <div class="navbar-wrapper">
-      <div class="container">
+      <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="{% url 'top_page:positive' %}">Tü &hearts;</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
+      <a class="navbar-brand" href="{% url 'top_page:positive' %}">Tü &hearts;</a>
+         </div>
+          <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li><a href="{% url 'top_page:index' %}">Home</a></li>
-                <li><a href="{% url 'giveinfo:about' %}">About</a></li>
-                <li><a href="{% url 'giveinfo:contact' %}">Contact</a></li>
-             </ul>
-<!--                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li class="dropdown-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>  -->
+                 <li><a href="{% url 'top_page:index' %}">Home</a></li>
+                 <li><a href="{% url 'giveinfo:about' %}">About</a></li>
+                 <li><a href="{% url 'giveinfo:contact' %}">Contact</a></li>
               </ul>
-            </div>
           </div>
-        </nav>
+       </div>
+    </nav>
+   </div>
+  </div>
+
+  <!-- content
+  ================================================== -->
+  <div class="container">
+    <div class="whiteback">
+
+    </div>
+  </div>
+
+<div class="container">
+
+  <div class="whiteback">
+
+  <div class="blog-header">
+    <h1 class="blog-title">認知バイアスチェック</h1>
+
+    <br>
+    <br>
+
+    <div class="col-sm-12">
+      <div class="alert alert-success" role="alert">
+        <ul>
+          <li>12個のショートストーリーを読み、どのくらい登場人物が自分の考え方に近いかをお答えください。</li>
+          <li>あまり考えず、直感的に回答してください。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container">
+<div class="row">
+
+<div class="col-sm-10 blog-main">
+<div class="blog-post">
+
+  <hr>
+
+  <!-- short story start-->
+  <div class="container">
+    <div class = "row">
+  　 <p><strong>Story 1:</strong></p>
+      <blockquote>
+        <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+      </blockquote>
+     <br>
+
+     <br>
+
+     <div class="col-sm-1 blog-main">
+     </div>
+     <div class="col-sm-8 blog-main">
+        <p>
+          <input type="radio" name="q11" value="かなり当てはまる"> かなり当てはまる
+          <input type="radio" name="q12" value="どちらかというと当てはまる"> どちらかというと当てはまる
+        </p>
+        <p>
+          <input type="radio" name="q13" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+        　<input type="radio" name="q14" value="全く当てはまらない"> 全く当てはまらない
+      　</p>
+     </div>
+     <div class="col-sm-1 blog-main">
+     </div>
+   </div>
+ </div>
+
+     <!-- short story end-->
+
+
+       <!-- short story start-->
+       <div class="container">
+         <div class = "row">
+       　 <p><strong>Story 2:</strong></p>
+           <blockquote>
+             <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+           </blockquote>
+          <br>
+
+          <br>
+
+          <div class="col-sm-1 blog-main">
+          </div>
+          <div class="col-sm-8 blog-main">
+             <p>
+               <input type="radio" name="q21" value="かなり当てはまる"> かなり当てはまる
+               <input type="radio" name="q22" value="どちらかというと当てはまる"> どちらかというと当てはまる
+             </p>
+             <p>
+               <input type="radio" name="q23" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+             　<input type="radio" name="q24" value="全く当てはまらない"> 全く当てはまらない
+           　</p>
+          </div>
+          <div class="col-sm-1 blog-main">
+          </div>
+        </div>
+      </div>
+          <!-- short story end-->
+
+          <!-- short story start-->
+          <div class="container">
+            <div class = "row">
+          　 <p><strong>Story 3:</strong></p>
+              <blockquote>
+                <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+              </blockquote>
+             <br>
+
+             <br>
+
+             <div class="col-sm-1 blog-main">
+             </div>
+             <div class="col-sm-8 blog-main">
+                <p>
+                  <input type="radio" name="q31" value="かなり当てはまる"> かなり当てはまる
+                  <input type="radio" name="q32" value="どちらかというと当てはまる"> どちらかというと当てはまる
+                </p>
+                <p>
+                  <input type="radio" name="q33" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+                　<input type="radio" name="q34" value="全く当てはまらない"> 全く当てはまらない
+              　</p>
+             </div>
+             <div class="col-sm-1 blog-main">
+             </div>
+           </div>
+         </div>
+             <!-- short story end-->
+
+             <!-- short story start-->
+             <div class="container">
+               <div class = "row">
+             　 <p><strong>Story 4:</strong></p>
+                 <blockquote>
+                   <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+                 </blockquote>
+                <br>
+
+                <br>
+
+                <div class="col-sm-1 blog-main">
+                </div>
+                <div class="col-sm-8 blog-main">
+                   <p>
+                     <input type="radio" name="q41" value="かなり当てはまる"> かなり当てはまる
+                     <input type="radio" name="q42" value="どちらかというと当てはまる"> どちらかというと当てはまる
+                   </p>
+                   <p>
+                     <input type="radio" name="q43" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+                   　<input type="radio" name="q44" value="全く当てはまらない"> 全く当てはまらない
+                 　</p>
+                </div>
+                <div class="col-sm-1 blog-main">
+                </div>
+              </div>
+            </div>
+                <!-- short story end-->
+
+                <!-- short story start-->
+                <div class="container">
+                  <div class = "row">
+                　 <p><strong>Story 5:</strong></p>
+                    <blockquote>
+                      <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+                    </blockquote>
+                   <br>
+
+                   <br>
+
+                   <div class="col-sm-1 blog-main">
+                   </div>
+                   <div class="col-sm-8 blog-main">
+                      <p>
+                        <input type="radio" name="q51" value="かなり当てはまる"> かなり当てはまる
+                        <input type="radio" name="q52" value="どちらかというと当てはまる"> どちらかというと当てはまる
+                      </p>
+                      <p>
+                        <input type="radio" name="q53" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+                      　<input type="radio" name="q54" value="全く当てはまらない"> 全く当てはまらない
+                    　</p>
+                   </div>
+                   <div class="col-sm-1 blog-main">
+                   </div>
+                 </div>
+               </div>
+                   <!-- short story end-->
+
+                   <!-- short story start-->
+                   <div class="container">
+                     <div class = "row">
+                   　 <p><strong>Story 6:</strong></p>
+                       <blockquote>
+                         <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+                       </blockquote>
+                      <br>
+
+                      <br>
+
+                      <div class="col-sm-1 blog-main">
+                      </div>
+                      <div class="col-sm-8 blog-main">
+                         <p>
+                           <input type="radio" name="q61" value="かなり当てはまる"> かなり当てはまる
+                           <input type="radio" name="q62" value="どちらかというと当てはまる"> どちらかというと当てはまる
+                         </p>
+                         <p>
+                           <input type="radio" name="q63" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+                         　<input type="radio" name="q64" value="全く当てはまらない"> 全く当てはまらない
+                       　</p>
+                      </div>
+                      <div class="col-sm-1 blog-main">
+                      </div>
+                    </div>
+                  </div>
+                      <!-- short story end-->
+
+                      <!-- short story start-->
+                      <div class="container">
+                        <div class = "row">
+                      　 <p><strong>Story 7:</strong></p>
+                          <blockquote>
+                            <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+                          </blockquote>
+                         <br>
+
+                         <br>
+
+                         <div class="col-sm-1 blog-main">
+                         </div>
+                         <div class="col-sm-8 blog-main">
+                            <p>
+                              <input type="radio" name="q71" value="かなり当てはまる"> かなり当てはまる
+                              <input type="radio" name="q72" value="どちらかというと当てはまる"> どちらかというと当てはまる
+                            </p>
+                            <p>
+                              <input type="radio" name="q73" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+                            　<input type="radio" name="q74" value="全く当てはまらない"> 全く当てはまらない
+                          　</p>
+                         </div>
+                         <div class="col-sm-1 blog-main">
+                         </div>
+                       </div>
+                     </div>
+                         <!-- short story end-->
+
+                         <!-- short story start-->
+                         <div class="container">
+                           <div class = "row">
+                         　 <p><strong>Story 8:</strong></p>
+                             <blockquote>
+                               <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+                             </blockquote>
+                            <br>
+
+                            <br>
+
+                            <div class="col-sm-1 blog-main">
+                            </div>
+                            <div class="col-sm-8 blog-main">
+                               <p>
+                                 <input type="radio" name="q81" value="かなり当てはまる"> かなり当てはまる
+                                 <input type="radio" name="q82" value="どちらかというと当てはまる"> どちらかというと当てはまる
+                               </p>
+                               <p>
+                                 <input type="radio" name="q83" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+                               　<input type="radio" name="q84" value="全く当てはまらない"> 全く当てはまらない
+                             　</p>
+                            </div>
+                            <div class="col-sm-1 blog-main">
+                            </div>
+                          </div>
+                        </div>
+                            <!-- short story end-->
+
+                            <!-- short story start-->
+                            <div class="container">
+                              <div class = "row">
+                            　 <p><strong>Story 9:</strong></p>
+                                <blockquote>
+                                  <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+                                </blockquote>
+                               <br>
+
+                               <br>
+
+                               <div class="col-sm-1 blog-main">
+                               </div>
+                               <div class="col-sm-8 blog-main">
+                                  <p>
+                                    <input type="radio" name="q91" value="かなり当てはまる"> かなり当てはまる
+                                    <input type="radio" name="q92" value="どちらかというと当てはまる"> どちらかというと当てはまる
+                                  </p>
+                                  <p>
+                                    <input type="radio" name="q93" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+                                  　<input type="radio" name="q94" value="全く当てはまらない"> 全く当てはまらない
+                                　</p>
+                               </div>
+                               <div class="col-sm-1 blog-main">
+                               </div>
+                             </div>
+                           </div>
+                               <!-- short story end-->
+
+                               <!-- short story start-->
+                               <div class="container">
+                                 <div class = "row">
+                               　 <p><strong>Story 10:</strong></p>
+                                   <blockquote>
+                                     <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+                                   </blockquote>
+                                  <br>
+
+                                  <br>
+
+                                  <div class="col-sm-1 blog-main">
+                                  </div>
+                                  <div class="col-sm-8 blog-main">
+                                     <p>
+                                       <input type="radio" name="q101" value="かなり当てはまる"> かなり当てはまる
+                                       <input type="radio" name="q102" value="どちらかというと当てはまる"> どちらかというと当てはまる
+                                     </p>
+                                     <p>
+                                       <input type="radio" name="q103" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+                                     　<input type="radio" name="q104" value="全く当てはまらない"> 全く当てはまらない
+                                   　</p>
+                                  </div>
+                                  <div class="col-sm-1 blog-main">
+                                  </div>
+                                </div>
+                              </div>
+                                  <!-- short story end-->
+
+                                  <!-- short story start-->
+                                  <div class="container">
+                                    <div class = "row">
+                                  　 <p><strong>Story 11:</strong></p>
+                                      <blockquote>
+                                        <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+                                      </blockquote>
+                                     <br>
+
+                                     <br>
+
+                                     <div class="col-sm-1 blog-main">
+                                     </div>
+                                     <div class="col-sm-8 blog-main">
+                                        <p>
+                                          <input type="radio" name="q111" value="かなり当てはまる"> かなり当てはまる
+                                          <input type="radio" name="q112" value="どちらかというと当てはまる"> どちらかというと当てはまる
+                                        </p>
+                                        <p>
+                                          <input type="radio" name="q113" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+                                        　<input type="radio" name="q114" value="全く当てはまらない"> 全く当てはまらない
+                                      　</p>
+                                     </div>
+                                     <div class="col-sm-1 blog-main">
+                                     </div>
+                                   </div>
+                                 </div>
+                                     <!-- short story end-->
+
+                                     <!-- short story start-->
+                                     <div class="container">
+                                       <div class = "row">
+                                     　 <p><strong>Story 12:</strong></p>
+                                         <blockquote>
+                                           <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
+                                         </blockquote>
+                                        <br>
+
+                                        <br>
+
+                                        <div class="col-sm-1 blog-main">
+                                        </div>
+                                        <div class="col-sm-8 blog-main">
+                                           <p>
+                                             <input type="radio" name="q121" value="かなり当てはまる"> かなり当てはまる
+                                             <input type="radio" name="q122" value="どちらかというと当てはまる"> どちらかというと当てはまる
+                                           </p>
+                                           <p>
+                                             <input type="radio" name="q123" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
+                                           　<input type="radio" name="q124" value="全く当てはまらない"> 全く当てはまらない
+                                         　</p>
+                                        </div>
+                                        <div class="col-sm-1 blog-main">
+                                        </div>
+                                      </div>
+                                    </div>
+                                        <!-- short story end-->
+
+    <br>
+
+    <hr>
+
+   <div class="container">
+    <div class="row">
+
+       <a class="btn btn-success" onclick="showResults()" role="button">結果を見る &raquo;</a>
+
+  　　<h2><center>あなたの認知バイアスの強さは……</center></h2>
+      <br>
+      <center><h1><p id="demo"></h1></center>
+      <br>
+
+      <div class="col-sm-1 blog-main">
+      </div>
+
+      <div class="col-sm-9 blog-main">
+      <div class="progress">
+        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow=showResults() aria-valuemin="0" aria-valuemax="100" ng-style="{width: (showResults() + "%")}">
+        </div>
+      </div>
+    </div>
+
+       <br>
+       <br>
+       <br>
+
+　　　　<div class="col-sm-2 blog-main">
+      </div>
+       <div class="col-sm-8 blog-main">
+         <a class="list-group-item active list-group-item-success">
+           <h3 class="list-group-item-heading" id="determination"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true">結果</span></h3></a>
+         <ul class="list-group">
+           <li class="list-group-item">
+             <p id="tip"></p>
+          </li>
+         </ul>
+      </div>
+      <div class="col-sm-2 blog-main">
+      </div>
+    </div>
 
       </div>
     </div>
 
-    <div class="container">
-
-      <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-9">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
-
-          <header class="jumbotron">
-            <h1>認知バイアス度チェック</h1>
-            <p>人の認知は、程度の差はあれ現実を完璧には反映してはいません。ここでは、代表的な認知バイアスをチェックします。</p>
-            <p><small>（このコンテンツは、チュービンゲンとなんの関係もありません）</small></p>
-          </header>
-
-          <div class="col-sm-12">
-            <div class="alert alert-success" role="alert">
-              <ul>
-                <li>12個のシチュエーションを読み、それぞれ登場人物の考え方が<strong>どれくらい自分に近いかどうか</strong>、
-                ご自身で判定してください。</li>
-                <li>あまり考えず、直感的に回答してください。</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-
-
-      <div class="row">
-
-      <div class="col-sm-10 blog-main">
-      <div class="blog-post">
-
-        <hr>
-            <div class="container">
-            　 <p><strong>Situation 1:</strong></p>
-               <p>上手くいかないことがあっても、成功を信じて進んでいける。</p>
-               <br>
-
-               <br>
-
-               <div class="col-sm-1 blog-main">
-               </div>
-               <div class="col-sm-8 blog-main">
-                 <p>
-                    <input type="radio" name="q1" value="かなり当てはまる"> かなり当てはまる
-                    <input type="radio" name="q1" value="どちらかというと当てはまる"> どちらかというと当てはまる
-                    <input type="radio" name="q1" value="どちらかというと当てはまらない"> どちらかというと当てはまらない
-                  　<input type="radio" name="q1" value="全く当てはまらない"> 全く当てはまらない
-                　</p>
-               </div>
-               <div class="col-sm-1 blog-main">
-               </div>
-
-            <br>
-
-            <div class="container">
-            　 <p><strong>Question 2:</strong></p>
-               <FONT size="5"><strong>幸せよりも、不満を感じることが多い。</strong></FONT>
-               <br>
-
-               <br>
-
-               <div class="col-sm-1 blog-main">
-               </div>
-               <div class="col-sm-8 blog-main">
-                  <input type="range" id="two" value="50">
-               </div>
-               <div class="col-sm-1 blog-main">
-               </div>
-
-               <br>
-                 <div class="col-sm-2 blog-main">
-                 </div>
-                 <div class="col-sm-3 blog-main">
-                    <p><small>&larr; 当てはまらない </small>
-                 </div>
-                 <div class="col-sm-1 blog-main">
-                 </div>
-                 <div class="col-sm-4 blog-main">
-                     <small>当てはまる &rarr;</small></p>
-                 </div>
-            </div>
-
-            <br>
-
-
-          <div class="container">
-          　 <p><strong>Question 3:</strong></p>
-             <FONT size="5"><strong>人の長所よりも、短所に目がいきがちだ。</strong></FONT>
-             <br>
-
-             <br>
-
-             <div class="col-sm-1 blog-main">
-             </div>
-             <div class="col-sm-8 blog-main">
-                <input type="range" id="three" value="50">
-             </div>
-             <div class="col-sm-1 blog-main">
-             </div>
-
-             <br>
-               <div class="col-sm-2 blog-main">
-               </div>
-               <div class="col-sm-3 blog-main">
-                  <p><small>&larr; 当てはまらない </small>
-               </div>
-               <div class="col-sm-1 blog-main">
-               </div>
-               <div class="col-sm-4 blog-main">
-                   <small>当てはまる &rarr;</small></p>
-               </div>
-          </div>
-
-          <br>
-
-
-          <div class="container">
-          　 <p><strong>Question 4:</strong></p>
-             <FONT size="5"><strong>自分は劣った人間だと思うことがよくある。</strong></FONT>
-             <br>
-
-             <br>
-
-             <div class="col-sm-1 blog-main">
-             </div>
-             <div class="col-sm-8 blog-main">
-                <input type="range" id="four" value="50">
-             </div>
-             <div class="col-sm-1 blog-main">
-             </div>
-
-             <br>
-               <div class="col-sm-2 blog-main">
-               </div>
-               <div class="col-sm-3 blog-main">
-                  <p><small>&larr; 当てはまらない </small>
-               </div>
-               <div class="col-sm-1 blog-main">
-               </div>
-               <div class="col-sm-4 blog-main">
-                   <small>当てはまる &rarr;</small></p>
-               </div>
-          </div>
-
-          <br>
-
-
-          <div class="container">
-          　 <p><strong>Question 5:</strong></p>
-             <FONT size="5"><strong>楽しい話をしたり、よく笑ったりする。</strong></FONT>
-             <br>
-
-             <br>
-
-             <div class="col-sm-1 blog-main">
-             </div>
-             <div class="col-sm-8 blog-main">
-                <input type="range" id="five" value="50">
-             </div>
-             <div class="col-sm-1 blog-main">
-             </div>
-
-             <br>
-               <div class="col-sm-2 blog-main">
-               </div>
-               <div class="col-sm-3 blog-main">
-                  <p><small>&larr; 当てはまらない </small>
-               </div>
-               <div class="col-sm-1 blog-main">
-               </div>
-               <div class="col-sm-4 blog-main">
-                   <small>当てはまる &rarr;</small></p>
-               </div>
-          </div>
-
-          <br>
-
-
-          <div class="container">
-          　 <p><strong>Question 6:</strong></p>
-             <FONT size="5"><strong>自分は恵まれていると思う。</strong></FONT>
-             <br>
-
-             <br>
-
-             <div class="col-sm-1 blog-main">
-             </div>
-             <div class="col-sm-8 blog-main">
-                <input type="range" id="six" value="50">
-             </div>
-             <div class="col-sm-1 blog-main">
-             </div>
-
-             <br>
-               <div class="col-sm-2 blog-main">
-               </div>
-               <div class="col-sm-3 blog-main">
-                  <p><small>&larr; 当てはまらない </small>
-               </div>
-               <div class="col-sm-1 blog-main">
-               </div>
-               <div class="col-sm-4 blog-main">
-                   <small>当てはまる &rarr;</small></p>
-               </div>
-          </div>
-
-          <br>
-
-
-          <div class="container">
-          　 <p><strong>Question 7:</strong></p>
-             <FONT size="5"><strong>どうせ自分の人生はうまくいかないと思うことがある。</strong></FONT>
-             <br>
-
-             <br>
-
-             <div class="col-sm-1 blog-main">
-             </div>
-             <div class="col-sm-8 blog-main">
-                <input type="range" id="seven" value="50">
-             </div>
-             <div class="col-sm-1 blog-main">
-             </div>
-
-             <br>
-               <div class="col-sm-2 blog-main">
-               </div>
-               <div class="col-sm-3 blog-main">
-                  <p><small>&larr; 当てはまらない </small>
-               </div>
-               <div class="col-sm-1 blog-main">
-               </div>
-               <div class="col-sm-4 blog-main">
-                   <small>当てはまる &rarr;</small></p>
-               </div>
-          </div>
-
-          <br>
-
-
-          <div class="container">
-          　 <p><strong>Question 8:</strong></p>
-             <FONT size="5"><strong>現在の暮らしに満足や感謝を覚えることが多い。</strong></FONT>
-             <br>
-
-             <br>
-
-             <div class="col-sm-1 blog-main">
-             </div>
-             <div class="col-sm-8 blog-main">
-                <input type="range" id="eight" value="50">
-             </div>
-             <div class="col-sm-1 blog-main">
-             </div>
-
-             <br>
-               <div class="col-sm-2 blog-main">
-               </div>
-               <div class="col-sm-3 blog-main">
-                  <p><small>&larr; 当てはまらない </small>
-               </div>
-               <div class="col-sm-1 blog-main">
-               </div>
-               <div class="col-sm-4 blog-main">
-                   <small>当てはまる &rarr;</small></p>
-               </div>
-          </div>
-
-          <br>
-
-          <hr>
-          <hr>
-
-         <div class="row">
-
-          <div class="container">
-
-          　　<h2><center>あなたのポジティブさは……</center></h2>
-            <br>
-            <center><h1><p id="demo"></h1></center>
-            <br>
-
-            <div class="col-sm-1 blog-main">
-            </div>
-
-            <div class="col-sm-9 blog-main">
-            <div class="progress">
-              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow=showResults() aria-valuemin="0" aria-valuemax="100" ng-style="{width: (showResults() + "%")}">
-              </div>
-            </div>
-          </div>
-
-          <br>
-
-            </div>
-                <br>
-             <a class="btn btn-success" onclick="showResults()" role="button">結果を見る &raquo;</a>
-
-             <br>
-             <br>
-             <br>
-
-      　　　　　　<div class="col-sm-3 blog-main">
-             </div>
-             <div class="col-sm-9 blog-main">
-               <a class="list-group-item active list-group-item-success">
-                 <h3 class="list-group-item-heading" id="determination"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true">結果</span></h3></a>
-               <ul class="list-group">
-                 <li class="list-group-item">
-                   <p id="tip"></p>
-                </li>
-               </ul>
-
-            </div>
-
-          </div>
-
-      　　　<br>
-
-
-           <script language="JavaScript">
-           function showResults() {
-               var one = parseInt(document.getElementById("one").value);
-               var two = parseInt(document.getElementById("two").value);
-               var three = parseInt(document.getElementById("three").value);
-               var four = parseInt(document.getElementById("four").value);
-               var five = parseInt(document.getElementById("five").value);
-               var six = parseInt(document.getElementById("six").value);
-               var seven = parseInt(document.getElementById("seven").value);
-               var eight = parseInt(document.getElementById("eight").value);
-
-               var w1 = 1;
-               var w2 = -1;
-               var w3 = -1;
-               var w4 = -1;
-               var w5 = 1;
-               var w6 = 1;
-               var w7 = -1;
-               var w8 = 1;
-
-               var numq = 8;
-
-               var point = 50 + Math.round((w1*one+w2*two+w3*three+w4*four+w5*five+w6*six+w7*seven+w8*eight)/numq);
-
-               $('.progress-bar').css('width', point +'%').attr('aria-valuenow', point);
-               document.getElementById("demo").innerHTML = point;
-
-               if(point>50){
-                 document.getElementById("determination").innerHTML = "どちらかというとポジティブな傾向があります";
-                 document.getElementById("tip").innerHTML = "ストレスに対する受け止め方もポジティブなので、気持ちも安定しているでしょう。傷ついても回復が早いでしょう。" +
-                 "対人関係も安定し、周りの人にフレンドリーに接することが得意かもしれません";
-               }
-               else if(point==50){
-                 document.getElementById("determination").innerHTML = "ポジティブでもネガティブでもどちらとも言えません";
-                 document.getElementById("tip").innerHTML = "自分の感情の調整がうまくいっているのかもしれません。対人関係において、必要以上に攻撃的、防衛的になったり、" +
-                 "表向きの自分と内面の自分にギャップがあっても、傷つきすぎず、心を戻していける人だと思われます。";
-               }
-               else{
-                 document.getElementById("determination").innerHTML = "どちらかというとネガティブな傾向があります";
-                 document.getElementById("tip").innerHTML = "ストレスに対して傷つきやすく、表面上は平気を装っていても、内面は反発や攻撃性を抱えやすいかもしれません。" +
-                 "対人関係は不安定なことが多く、傷ついてから回復するのも遅めかもしれません。そういう面がもしあるなら、意識して、不必要に長く落ち込まないようにしましょう。";
-               }
-
+　　　<br>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+     <script language="JavaScript">
+     function showResults() {
+       anslist = ["","","","","","","","","","","",""]
+       for (i = 1; i < 13; i++) {
+           var one = document.getElementsByName("q" + i + "1").checked;
+           var two = document.getElementsByName("q" + i + "2").checked;
+           var three = document.getElementsByName("q" + i + "3").checked;
+           var four = document.getElementsByName("q" + i + "4").checked;
+
+           if (one==true){
+             anslist[i-1] = -2;
+           } else if (two==true){
+              anslist[i-1] = -1;
+           } else if (three==true){
+             anslist[i-1] = 1;
+           } else if (four==true){
+             anslist[i-1] = 2
            }
-           </script>
+          }
+
+       score = [0,0,0,0,0,0]
+       for (i = 0; i < 6; i++){
+         score[i] = anslist[2*i-1] + anslist[2*i]
+       }
+
+       var chart = new CanvasJS.Chart("chartContainer",
+     	{
+     		animationEnabled: true,
+     		title:{
+     			text: "各認知バイアスの強さ"
+     		},
+     		data: [
+     		{
+     			type: "column", //change type to bar, line, area, pie, etc
+     			dataPoints: [
+     				{ label: "FAE", y: score[0] },
+     				{ label: "Confirmation bias", y: score[1] },
+     				{ label: "Self-serving bias",  y: score[2] },
+     				{ label: "Belief bias",  y: score[3] },
+     				{ label: "Framing",  y: score[4] },
+             { label: "Hindsight bias",  y: score[5] },
+     			]
+     		}
+     		]
+     		});
+
+     	chart.render();
+
+         $('.progress-bar').css('width', point +'%').attr('aria-valuenow', point);
+         document.getElementById("demo").innerHTML = point;
+
+         if(point>50){
+           document.getElementById("determination").innerHTML = "どちらかというとポジティブな傾向があります";
+           document.getElementById("tip").innerHTML = "ストレスに対する受け止め方もポジティブなので、気持ちも安定しているでしょう。傷ついても回復が早いでしょう。" +
+           "対人関係も安定し、周りの人にフレンドリーに接することが得意かもしれません";
+         }
+         else if(point==50){
+           document.getElementById("determination").innerHTML = "ポジティブでもネガティブでもどちらとも言えません";
+           document.getElementById("tip").innerHTML = "自分の感情の調整がうまくいっているのかもしれません。対人関係において、必要以上に攻撃的、防衛的になったり、" +
+           "表向きの自分と内面の自分にギャップがあっても、傷つきすぎず、心を戻していける人だと思われます。";
+         }
+         else{
+           document.getElementById("determination").innerHTML = "どちらかというとネガティブな傾向があります";
+           document.getElementById("tip").innerHTML = "ストレスに対して傷つきやすく、表面上は平気を装っていても、内面は反発や攻撃性を抱えやすいかもしれません。" +
+           "対人関係は不安定なことが多く、傷ついてから回復するのも遅めかもしれません。そういう面がもしあるなら、意識して、不必要に長く落ち込まないようにしましょう。";
+         }
+
+     }
+     </script>
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    </div><!-- /.whiteback -->
+
+  </div>
+
+</div>
+
+    <!-- footer -->
+      <footer class="blog-footer">
+        <div class = "container">
+          <div class = "row">
+           <p>
+              <a href="{% url 'stress:check1' %}">
+                <p class="text-center">Back to top (回答結果はクリアされます)</p>
+              </a>
+           </p>
+         </div>
+       </div>
+      </footer>
 
 
-            </div><!-- /.row -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery.min.js' %}"><\/script>')</script>
+    <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
 
-          </div><!-- /.container -->
-
-          </div><!-- /.whiteback -->
-
-          <!-- footer -->
-            <footer class="blog-footer">
-             <p>
-                <a href="{% url 'stress:check1' %}">
-                  <p class="text-center">Back to top (回答結果はクリアされます)</p>
-                </a>
-             </p>
-            </footer>
-
-
-          <!-- Bootstrap core JavaScript
-          ================================================== -->
-          <!-- Placed at the end of the document so the pages load faster -->
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-          <script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery.min.js' %}"><\/script>')</script>
-          <script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
-
-          <script type="text/javascript">
-             $.backstretch("../../../static/gallary/suzu19.jpg");
-          </script>
-          <script src="{% static 'js/bootstrap.min.js' %}"></script>
-          <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-          <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
-        </body>
-      </html>
+    <script type="text/javascript">
+       $.backstretch("../../../static/gallary/suzu19.jpg");
+    </script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+  </body>
+</html>
