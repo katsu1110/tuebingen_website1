@@ -74,7 +74,7 @@ body {
   background-image: url("../../static/gallary/me9.jpg");
   background-repeat: no-repeat;
   background-position: left;
-  width: 100%;
+  background-size: 100%;
 }
 
 .layer-transparent {
