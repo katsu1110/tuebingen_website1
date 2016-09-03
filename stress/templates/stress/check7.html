@@ -141,7 +141,7 @@
   <hr>
   <div class="container">
       　 <p><strong>Question 1:</strong></p>
-         <FONT size="5"><strong>眠かったり空腹だと、不機嫌になりやすい。</strong></FONT>
+         <FONT size="5"><strong>困った時に、助けを求められる人があまりいない。</strong></FONT>
          <br>
 
          <br>
@@ -171,7 +171,7 @@
 
       <div class="container">
       　 <p><strong>Question 2:</strong></p>
-         <FONT size="5"><strong>長い時間待つのは耐えられない。</strong></FONT>
+         <FONT size="5"><strong>親しく近い人でも、信用できないときがある。</strong></FONT>
          <br>
 
          <br>
@@ -202,7 +202,7 @@
 
     <div class="container">
     　 <p><strong>Question 3:</strong></p>
-       <FONT size="5"><strong>感情的になりやすい。</strong></FONT>
+       <FONT size="5"><strong>よく人の顔色をうかがっている。</strong></FONT>
        <br>
 
        <br>
@@ -233,7 +233,7 @@
 
     <div class="container">
     　 <p><strong>Question 4:</strong></p>
-       <FONT size="5"><strong>嫌なことがあると、すぐ投げ出してしまう。</strong></FONT>
+       <FONT size="5"><strong>守られているという実感はない。</strong></FONT>
        <br>
 
        <br>
@@ -264,7 +264,7 @@
 
     <div class="container">
     　 <p><strong>Question 5:</strong></p>
-       <FONT size="5"><strong>気分の起伏が激しい。</strong></FONT>
+       <FONT size="5"><strong>アルコール、喫煙などに逃げ場所を求める。</strong></FONT>
        <br>
 
        <br>
@@ -295,7 +295,7 @@
 
     <div class="container">
     　 <p><strong>Question 6:</strong></p>
-       <FONT size="5"><strong>食べ過ぎ、飲み過ぎが多い。</strong></FONT>
+       <FONT size="5"><strong>誰かに自分をさらけ出すことが苦手だ。</strong></FONT>
        <br>
 
        <br>
@@ -326,7 +326,7 @@
 
     <div class="container">
     　 <p><strong>Question 7:</strong></p>
-       <FONT size="5"><strong>痛みには敏感なほうだ。</strong></FONT>
+       <FONT size="5"><strong>人に頼るより、自分の力だけで何とかしようとする。</strong></FONT>
        <br>
 
        <br>
@@ -356,7 +356,7 @@
 
     <div class="container">
     　 <p><strong>Question 8:</strong></p>
-       <FONT size="5"><strong>飽きっぽく、根気がない。</strong></FONT>
+       <FONT size="5"><strong>人に気ばかりつかっている。</strong></FONT>
        <br>
 
        <br>
@@ -386,7 +386,7 @@
 
     <div class="container">
         　 <p><strong>Question 9:</strong></p>
-           <FONT size="5"><strong>怒りが爆発すると抑えられないときがある。</strong></FONT>
+           <FONT size="5"><strong>自分の家庭環境を考えると、気が沈んでくる。</strong></FONT>
            <br>
 
            <br>
@@ -416,7 +416,7 @@
 
     <div class="container">
         　 <p><strong>Question 10:</strong></p>
-           <FONT size="5"><strong>思いつきやその場の気分で行動してしまう。</strong></FONT>
+           <FONT size="5"><strong>自分のことを理解してくれる人は、あまりいない。</strong></FONT>
            <br>
 
            <br>
@@ -448,9 +448,8 @@
     <hr>
     <hr>
 
-   <div class="row">
-
     <div class="container">
+      <div class="row">
 
     　　<h2><center>あなたの心のセイフティーネットは……</center></h2>
       <br>
@@ -521,17 +520,17 @@
 
          var numq = 10;
 
-         var point = Math.round((w1*one + w2*two + w3*three + w4*four + w5*five + w6*six + w7*seven + w8*eight + w9*nine + w10*ten)/numq);
+         var point = 100-Math.round((w1*one + w2*two + w3*three + w4*four + w5*five + w6*six + w7*seven + w8*eight + w9*nine + w10*ten)/numq);
 
          document.getElementById("demo").innerHTML = point;
          $('.progress-bar').css('width', point +'%').attr('aria-valuenow', point);
 
-         if(point>=70){
+         if(point<30){
            document.getElementById("determination").innerHTML = "心のセイフティーネットが乏しく、不安定な愛着を抱えている可能性があります。";
            document.getElementById("tip").innerHTML = "自分の助けになってくれる存在、自分をさらけ出せる存在がいないかもしれません。" +
            "1人でがんばりすぎず、もし可能なら、親など身近な人から始め、お互い頼りにできるような、安定した関係を築くように心がけるといいかもしれません。";
          }
-         else if(point>=50 && point<70){
+         else if(point>30 && point<70){
            document.getElementById("determination").innerHTML = "心のセイフティーネットがしっかりと確保されていないかもしれません。";
            document.getElementById("tip").innerHTML = "自分の助けになってくれる存在、自分をさらけ出せる存在がいないかもしれません。" +
            "１人でがんばりすぎず、たまには周りに頼ってみるといいかもしれません。難しければ、親など身近な人から頼りにしてみるといいかもしれません。";

@@ -57,47 +57,96 @@
 
   <div class="blog-header">
     <h1 class="blog-title">その他（主に心理テスト）</h1>
-    <p class="lead blog-description">環境適応力チェッカー　/　ジョハリの窓　/　渡し舟</p>
+    <p class="lead blog-description">環境適応力チェッカー　/　ジョハリの窓　/　渡し舟 / 認知バイアスチェッカー</p>
   </div>
 　<hr>
 
+
+<div class="container">
   <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-xs-10 col-md-5">
+      <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="{% static "gallary/free4.jpg" %}" alt="survive">
+            <div class="caption">
+              <h3>環境適応能力チェッカー</h3>
+              <p>海外留学・滞在って大変ですよね。自分の環境適応力を知ることが、よりよい海外生活への一歩かもしれませんよ？</p>
+              <p><a href="{% url 'stress:index' %}" class="btn btn-success" role="button">やってみる</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <div class="col-sm-8 blog-main">
-    <div class="blog-post">
-       <h3 class="blog-post-title">環境適応能力チェッカー</h3>
-       <p class="blog-post-meta"><a href="{% url 'stress:index' %}">  Let's do it! </a></p>
+  <div class="col-xs-10 col-md-5">
+          <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="{% static "gallary/free3.jpg" %}" alt="survive">
+            <div class="caption">
+              <h3>ジョハリの窓</h3>
+              <p>自分が知っているあなた、周りが知っているあなた。どのくらい自分を周りに出していますか？</p>
+              <p><a href="{% url 'stress:johari' %}" class="btn btn-success" role="button">やってみる</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-1">
+      </div>
+      </div>
 
-       <p>海外留学・滞在って大変ですよね。自分の環境適応力を知ることが、よりよい海外生活への一歩かもしれませんよ？</p>
-      <br>
-    </div><!-- /.blog-post -->
-    <hr>
+    </div>
+  </div>
 
-    <div class="blog-post">
-       <h3 class="blog-post-title">ジョハリの窓</h3>
-       <p class="blog-post-meta"><a href="{% url 'stress:johari' %}">  Let's do it! </a></p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-xs-10 col-md-5">
+        <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="{% static "gallary/free2.jpg" %}" alt="survive">
+            <div class="caption">
+              <h3>渡し舟</h3>
+              <p>今のあなたが、人生において大切にしているものって何でしょう。見えていますか？</p>
+              <p><a href="{% url 'stress:watari' %}" class="btn btn-success" role="button">やってみる</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-       <p>自分が知っているあなた、周りが知っているあなた。どのくらい自分を周りに出していますか？</p>
-      <br>
-    </div><!-- /.blog-post -->
-    <hr>
+    <div class="col-xs-10 col-md-5">
+      <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="{% static "gallary/free1.jpg" %}" alt="fake">
+            <div class="caption">
+              <h3>認知バイアスチェッカー</h3>
+              <p>人の思考も行動も、特定の偏りがあります。真っすぐな考え方、できてますか？</p>
+              <p><a href="{% url 'stress:cognitive' %}" class="btn btn-success" role="button">やってみる</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-1">
+  </div>
 
-    <div class="blog-post">
-       <h3 class="blog-post-title">渡し舟</h3>
-       <p class="blog-post-meta"><a href="{% url 'stress:watari' %}">  Let's do it! </a></p>
-
-       <p>今のあなたが、人生において大切にしているものって何でしょう。見えていますか？</p>
-      <br>
-    </div><!-- /.blog-post -->
-    <hr>
-
-    <div class="blog-post">
-       <h3 class="blog-post-title">認知バイアス</h3>
-       <p class="blog-post-meta"><a href="{% url 'stress:cognitive' %}">  Let's do it! </a></p>
-
-       <p>人の思考も行動も、特定の偏りがあります。真っすぐな考え方、できてますか？</p>
-      <br>
-    </div><!-- /.blog-post -->
-    <hr>
+  <br>
+  <hr>
+  <br>
 
 {% endblock %}

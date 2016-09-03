@@ -446,9 +446,9 @@
     <hr>
     <hr>
 
-   <div class="row">
 
     <div class="container">
+      <div class="row">
 
     　　<h2><center>あなたの情動制御力は……</center></h2>
       <br>
@@ -519,17 +519,17 @@
 
          var numq = 10;
 
-         var point = Math.round((w1*one + w2*two + w3*three + w4*four + w5*five + w6*six + w7*seven + w8*eight + w9*nine + w10*ten)/numq);
+         var point = 100 - Math.round((w1*one + w2*two + w3*three + w4*four + w5*five + w6*six + w7*seven + w8*eight + w9*nine + w10*ten)/numq);
 
          document.getElementById("demo").innerHTML = point;
          $('.progress-bar').css('width', point +'%').attr('aria-valuenow', point);
 
-         if(point>=70){
+         if(point<=30){
            document.getElementById("determination").innerHTML = "情動制御力がかなり落ちている傾向があります。";
            document.getElementById("tip").innerHTML = "感情のままに行動し、対人関係が不安定になっているかもしれません。" +
            "もしかしたら気づかないうちに相手を傷つけている可能性があります。うつろいやすい自分の気持ちを意識して、自己主張と抑制の適度なバランスを探すといいかもしれません。";
          }
-         else if(point>=50 && point<70){
+         else if(point>30 && point<70){
            document.getElementById("determination").innerHTML = "情動制御力が低い傾向があります。";
            document.getElementById("tip").innerHTML = "感情のままに行動し、対人関係が不安定になっているかもしれません。" +
            "うつろいやすい自分の気持ちを意識して、自己主張と抑制の適度なバランスを探すといいかもしれません。";
