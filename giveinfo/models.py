@@ -49,3 +49,6 @@ class Link(models.Model):
 
     def __str__(self):
             return self.link_title
+
+class ImageUpload(models.Model):
+    upload = models.ImageField(upload_to='uploads/%Y/%m/%d/')
