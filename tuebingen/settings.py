@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import socket
+from django.core.mail import send_mail
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -141,6 +142,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
 # email
+DEFAULT_FROM_EMAIL = 'webmaster@localhost'
+SERVER_EMAIL = 'root@localhost'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'katsu1110'
 EMAIL_HOST_PASSWORD = 'End1glory'

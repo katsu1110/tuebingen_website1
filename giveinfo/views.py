@@ -1,9 +1,9 @@
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponse
 from django.utils import timezone
-from .models import Summary, Experience, Article, Link, Experiencetext, Articletext, ImageUpload
+from .models import Experience, Article, Link
 from .forms import SubmitForm
 from django.core.mail import send_mail
+from django.conf import settings
 # ExperienceText, ArticleText
 # Create your views here.
 
@@ -55,15 +55,19 @@ def contact(request):
             dislike = form.cleaned_data['dislike']
             others = form.cleaned_data['others']
             agree = form.cleaned_data['agree']
-            image = form.cleaned_data['image']
 
-            texts = dislike + ' / ' + like + ' / ' + others
+            texts = email + ' / ' + dislike + ' / ' + like + ' / ' + others
             recipients = ['code1110g-show@hotmail.co.jp']
 
             if cc_myself:
                 recipients.append(email)
 
-            send_mail(your_name, texts, email, recipients, fail_silently=False)
+            if agree:
+                texts = texts + '/ YES'
+            else:
+                texts = texts + '/ NO'
+
+            send_mail(your_name, texts, settings.DEFAULT_FROM_EMAIL, recipients, fail_silently=False)
             message = 'ありがとうございます。内容は送信されました！'
 
         else:
