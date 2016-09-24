@@ -146,6 +146,6 @@ DEFAULT_FROM_EMAIL = 'webmaster@localhost'
 SERVER_EMAIL = 'root@localhost'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_USER = 'katsu1110'
-EMAIL_HOST_PASSWORD = 'End1glory'
+EMAIL_HOST_PASSWORD = 'code1110'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

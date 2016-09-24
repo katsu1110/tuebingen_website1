@@ -64,42 +64,6 @@
   <div class="row">
 
     <div class="col-xs-11 col-sm-8 blog-main">
-    <div class="blog-post">
-       <h3 class="blog-post-title">滞在・留学体験記</h3>
-       <p class="blog-post-meta"><a href="{% url 'giveinfo:experience_top' %}">(jump & share experiences!)</a></p>
-
-       <p>チュービンゲンに滞在した、あるいは滞在している日本人の方々による、滞在・留学体験記のコーナーです。</p>
-      <br>
-     <div class="container">
-      <div class="colorback">
-       <ul>
-       {% if experiences %}
-          {% for experience in experiences %}
-           <li><a href="{% url 'giveinfo:experience' experience.id %}">{{ experience.text_title }}</a> : by {{ experience.writer }}</li>
-          {% endfor %}
-       {% endif %}
-      </ul>
-    </div>
-  </div>
-      <br>
-       <p>
-         <div class="alert alert-success" role="alert">
-           <div>
-           <strong>滞在・留学体験記を書いてくれる元・現チュービンゲン在住の日本人の方を探しています！</strong>
-           </div>
-           <br>
-           <ul>
-             <li>字数は2000字以内とします。</li>
-             <li>本名が望ましいですが、イニシャル、匿名でも構いません。</li>
-             <li>ただ、性別・仕事（例：ポスドク、交換留学生、など）は教えてくれると助かります。でも任意です。</li>
-             <li>word、メモ帳などで文章を書いていただき、<a href="mailto:code1110g-show@hotmail.co.jp">管理人</a>まで送ってください！</li>
-           </ul>
-         </div>
-       </p>
-       <br>
-
-    </div><!-- /.blog-post -->
-    <hr>
 
      <div class="blog-post">
         <h3 class="blog-post-title">テーマ別コラム</h3>
@@ -118,6 +82,7 @@
      </div>
      <br>
 
+<!--
         <p>
           <div class="alert alert-success" role="alert">
           <div>
@@ -143,8 +108,46 @@
           </div>
         </p>
         <br>
-
+-->
      </div><!-- /.blog-post -->
+     <hr>
+
+     <div class="blog-post">
+        <h3 class="blog-post-title">滞在・留学体験記</h3>
+        <p class="blog-post-meta"><a href="{% url 'giveinfo:experience_top' %}">(jump & share experiences!)</a></p>
+
+        <p>チュービンゲンに滞在した、あるいは滞在している日本人の方々による、滞在・留学体験記のコーナーです。</p>
+       <br>
+      <div class="container">
+       <div class="colorback">
+        <ul>
+        {% if experiences %}
+           {% for experience in experiences %}
+            <li><a href="{% url 'giveinfo:experience' experience.id %}">{{ experience.text_title }}</a> : by {{ experience.writer }}</li>
+           {% endfor %}
+        {% endif %}
+       </ul>
+     </div>
+   </div>
+       <br>
+        <p>
+  <!--        <div class="alert alert-success" role="alert">
+            <div>
+            <strong>滞在・留学体験記を書いてくれる元・現チュービンゲン在住の日本人の方を探しています！</strong>
+            </div>
+            <br>
+            <ul>
+              <li>字数は2000字以内とします。</li>
+              <li>本名が望ましいですが、イニシャル、匿名でも構いません。</li>
+              <li>ただ、性別・仕事（例：ポスドク、交換留学生、など）は教えてくれると助かります。でも任意です。</li>
+              <li>word、メモ帳などで文章を書いていただき、<a href="mailto:code1110g-show@hotmail.co.jp">管理人</a>まで送ってください！</li>
+            </ul>
+          </div>
+        </p>
+        <br>
+-->
+     </div><!-- /.blog-post -->
+
      <hr>
 
      <div class="blog-post">
@@ -168,5 +171,28 @@
      </div><!-- /.blog-post -->
      <hr>
 
+     <div class="container">
+       <div class="row">
+         <div class="col-xs-10 col-md-3">
+           <p>記事検索はこちら!</p>
+         </div>
+         <div class="col-xs-10 col-md-6">
+           <script>
+             (function() {
+               var cx = '016269209130691930986:fe0wee5_aco';
+               var gcse = document.createElement('script');
+               gcse.type = 'text/javascript';
+               gcse.async = true;
+               gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+               var s = document.getElementsByTagName('script')[0];
+               s.parentNode.insertBefore(gcse, s);
+             })();
+           </script>
+           <div id="gsc">
+             <gcse:search></gcse:search>
+             </div>
+          </div>
+        </div>
+      </div>
 
 {% endblock %}
