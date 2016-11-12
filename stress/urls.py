@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^watari/$',views.watari,name='watari'),
     # /stress/cognitive/
     url(r'^cognitive/$',views.cognitive,name='cognitive'),
+
     ]
 
     #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

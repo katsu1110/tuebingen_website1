@@ -1,5 +1,12 @@
 from django.contrib import admin
 from .models import Summary, Experience, Experiencetext, Article, Articletext, Link
+from django_summernote.admin import SummernoteModelAdmin
+
+class ExperiencetextAdmin(SummernoteModelAdmin):
+    pass
+
+class ArticletextAdmin(SummernoteModelAdmin):
+    pass
 
 #class SummaryAdmin(admin.ModelAdmin):
 #    change_form_template = 'giveinfo/admin/change_form.html'

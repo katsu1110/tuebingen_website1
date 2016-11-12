@@ -42,10 +42,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
     'top_page',
     'giveinfo',
     'pictures',
     'stress',
+    'django_summernote',
 ]
 
 # MEDIA: Absolute filesystem path to the directory that will hold user-uploaded files.
@@ -142,10 +144,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
 # email
-DEFAULT_FROM_EMAIL = 'webmaster@localhost'
-SERVER_EMAIL = 'root@localhost'
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'katsu1110'
-EMAIL_HOST_PASSWORD = 'code1110'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'webmaster@localhost'
+# SERVER_EMAIL = 'root@localhost'
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'katsu1110'
+# EMAIL_HOST_PASSWORD = 'code1110'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True

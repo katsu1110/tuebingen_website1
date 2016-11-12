@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^giveinfo/',include('giveinfo.urls',namespace='giveinfo')),
     url(r'^pictures/',include('pictures.urls',namespace='pictures')),
     url(r'^stress/',include('stress.urls',namespace='stress')),
+    url(r'^summernote/',include('django_summernote.urls')),
 ]
