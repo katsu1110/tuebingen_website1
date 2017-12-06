@@ -9,6 +9,8 @@ urlpatterns = [
     url(r'^$',views.index,name='index'),
     # /top_page/positive/
     url(r'^positive/$',views.positive,name='positive'),
+    # /top_page/happybirthday/
+    url(r'^happybirthday/$',views.happybirthday,name='happybirthday'),
 ]
 
 #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

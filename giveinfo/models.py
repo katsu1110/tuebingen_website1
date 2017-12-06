@@ -1,4 +1,6 @@
 from django.db import models
+#from tinymce.models import HTMLField
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Summary(models.Model):
@@ -20,7 +22,9 @@ class Experiencetext(models.Model):
     experience = models.ForeignKey(Experience,on_delete=models.CASCADE)
     sub_text = models.CharField(max_length=200, default='')
     tag = models.CharField(max_length=100, default='管理人')
-    main_text = models.TextField()
+    #main_text = models.TextField()
+    #main_text = HTMLField()
+    main_text = RichTextField()
 
     def __str__(self):
         return self.sub_text
@@ -38,9 +42,11 @@ class Article(models.Model):
 
 class Articletext(models.Model):
     article = models.ForeignKey(Article,on_delete=models.CASCADE)
-    sub_text = models.CharField(max_length=200, default='')    
+    sub_text = models.CharField(max_length=200, default='')
     tag = models.CharField(max_length=100, default='生活全般')
-    main_text = models.TextField()
+    #main_text = models.TextField()
+    #main_text = HTMLField()
+    main_text = RichTextField()
 
     def __str__(self):
         return self.sub_text

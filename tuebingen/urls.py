@@ -13,8 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import include, url
+from django.conf.urls.static import static
 from django.contrib import admin
+
 admin.autodiscover()
 
 urlpatterns = [
@@ -23,5 +26,13 @@ urlpatterns = [
     url(r'^giveinfo/',include('giveinfo.urls',namespace='giveinfo')),
     url(r'^pictures/',include('pictures.urls',namespace='pictures')),
     url(r'^stress/',include('stress.urls',namespace='stress')),
-    url(r'^summernote/',include('django_summernote.urls')),
-]
+    #url(r'^summernote/', include('django_summernote.urls')),
+    #url(r'^tinymce/',include('tinymce.urls')),
+    url(r'^ckeditor/',include('ckeditor_uploader.urls')),
+] + static(
+        settings.STATIC_URL,
+        document_root=settings.STATIC_ROOT
+) + static(
+        settings.MEDIA_URL,
+        document_root=settings.MEDIA_ROOT
+)

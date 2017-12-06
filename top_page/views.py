@@ -11,3 +11,6 @@ def index(request):
 
 def positive(request):
     return render(request, 'top_page/positive.html')
+
+def happybirthday(request):
+    return render(request, 'top_page/happybirthday.html')

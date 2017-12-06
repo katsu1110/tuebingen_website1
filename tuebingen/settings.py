@@ -12,11 +12,13 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import socket
-from django.core.mail import send_mail
+import tempfile
+# from django.core.mail import send_mail
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+#BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+#BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -30,7 +32,7 @@ if socket.gethostname() == 'katsy':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['code1110.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -47,7 +49,14 @@ INSTALLED_APPS = [
     'giveinfo',
     'pictures',
     'stress',
-    'django_summernote',
+#    'django_summernote',
+#    'tinymce',
+    'ckeditor',
+    'ckeditor_uploader',
+    # 'feincms',
+    # 'mptt',
+    # 'feincms.module.page',
+    # 'feincms.module.medialibrary',
 ]
 
 # MEDIA: Absolute filesystem path to the directory that will hold user-uploaded files.
@@ -137,11 +146,30 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_URL = '/static/'
+#STATIC_ROOT = "/home/code1110/tuebingen_website1/static"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
+#STATIC_ROOT = [os.path.join(BASE_DIR, "static"),]
+STATIC_ROOT = os.path.join(tempfile.gettempdir(), 'ck_static')
 
 # media
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(tempfile.gettempdir(), 'ck_media')
+#MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
+
+# ckeditor setting
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'
+
+# Tinymce setting
+#TINYMCE_DEFAULT_CONFIG = {
+#    'plugins': "table,spellchecker,paste,searchreplace",
+#    'theme': "advanced",
+#    'cleanup_on_startup': True,
+#    'custom_undo_redo_levels': 10,
+#}
+#TINYMCE_SPELLCHECKER = False
+#TINYMCE_COMPRESSOR = True
 
 # email
 # DEFAULT_FROM_EMAIL = 'webmaster@localhost'
